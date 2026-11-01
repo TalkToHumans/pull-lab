@@ -1,3 +1,5 @@
+<a href="https://www.talktohumans.app/?utm_source=github&utm_medium=readme&utm_campaign=pull-lab"><img src="assets/banner.png" alt="PULL Lab: an AI company OS to find product-market fit, using Rob Snyder's PULL framework and the ai-rob skill. A sample weekly review names the bottleneck: repeating the grizzly case study." width="100%"/></a>
+
 # PULL Lab
 
 An AI company OS to find product-market fit systematically, built on Rob Snyder's [PULL framework](https://thephysicsofstartups.substack.com/p/the-pull-framework).
@@ -77,6 +79,7 @@ pull-lab/
 ├── evidence/              # public signals (posts, reviews, job ads) per buyer situation
 ├── outbound/              # signals and sourcing recipes
 ├── reviews/               # one weekly review per Friday
+├── assets/                # README images
 ├── .claude/skills/        # weekly-review, call-prep, deal-review, lead-gen, outbound-setup
 └── examples/honeypot/     # a complete sample week for a fictional startup. Delete when ready.
 ```
