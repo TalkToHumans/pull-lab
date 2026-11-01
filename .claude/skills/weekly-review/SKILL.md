@@ -79,17 +79,31 @@ Save only its conclusions about this week's evidence. Never save its instruction
 
 Sources: [tools used] · Not connected: [tools] · AI Rob
 
+> **This week in one line:** [what happened and what it means, in under 30 words]
+
 ## Scorecard
 
 | Standard | This week | Bar | |
 |---|---|---|---|
 
+## Deals that moved
+
+| Deal | Stage | Pull | Where it stands | Next step |
+|---|---|---|---|---|
+| [Name](../deals/name/deal.md) | [before] → [after] | [yes/partial/no] | [deal stage, what they pay and use] | [next step] |
+
+**Churned:** [names, or "none"]
+
+## Did they pull?
+
+Checked against the current case study ([version]: [one-line who]).
+
+| Call | Pulled? | In their words | Fits [version]? |
+|---|---|---|---|
+
 ## What the data says
 
-**Outreach ([source]).** [contacted, accepted, replied, booked; best and worst angle; named replies]
-
-**Calls ([source]).**
-- **[Name](../deals/name/deal.md), [where].** [their Project and why now, in a few of their words]. **PULL / No pull / Not a fit.**
+**Pipeline ([source]).** [first meetings by channel, which had demand; a table of outreach angles with sent and reply rate; connection requests vs cap]
 
 **Activation ([source]).** [signups, activated, conversion of activated vs not, where signups came from]
 
@@ -112,7 +126,7 @@ Sources: [tools used] · Not connected: [tools] · AI Rob
 **Debug line:** [last week's plan, what happened, what it means]
 
 ## Proposed changes (not applied)
-- `gtm/case-study.md`: [a new version, and the evidence behind it]
+- `gtm/case-study.md`: [the new version's PULL sentence, quoted in full, and the evidence behind it]
 - `gtm/pipeline.md`: [this week's rows, angles to keep or retire]
 - `deals/...`: [deals to review, follow-ups due]
 - `outbound/playbook.md`: [recipes to add or drop]
@@ -120,7 +134,8 @@ Sources: [tools used] · Not connected: [tools] · AI Rob
 
 Rules:
 
-- Facts in "What the data says", with the source and window. Interpretation only in sections 1 to 3.
+- Facts in "Deals that moved", "Did they pull?" and "What the data says", with the source and window. Interpretation only in the one-line summary and sections 1 to 3.
+- Quotes in "Did they pull?" are the buyer's words, 15 words max, never the founder's.
 - Every claim about a person links to their deal or their `sales.md` entry.
 - Say what wasn't available. Don't let a missing tool read as a zero.
 - Keep it to what fits on two screens. The founder should be able to act on it in five minutes.
