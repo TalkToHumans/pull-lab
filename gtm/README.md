@@ -1,0 +1,18 @@
+# GTM memory
+
+AI Rob's memory of your go-to-market. AI Rob reads these files before it advises you, and the skills update them as the week goes.
+
+They're created from AI Rob's own templates the first time you run `/weekly-review` (or ask *"set up my AI Rob memory"*). The templates belong to AI Rob, so this repo doesn't ship them. See [examples/honeypot/gtm/](../examples/honeypot/gtm/) for filled-in versions.
+
+| File | What it holds | Updated by |
+|---|---|---|
+| `case-study.md` | The one situation you're trying to serve, written as PULL, with every past version in a dated changelog | weekly-review (proposed, you approve) |
+| `pipeline.md` | First meetings per week, and the numbers per channel and per outreach angle | weekly-review, outbound-setup |
+| `sales.md` | One entry per sales call: did they pull, P, U, L+L, next step, outcome | deal-review, call-prep |
+| `sales-process.md` | Your call scripts and sales steps | call-prep, on request |
+| `post-sales.md` | What success looks like after the sale, and whether customers reach it | weekly-review, on request |
+
+Rules for these files:
+
+- **Add, don't overwrite.** New versions and entries go on top with a date. The old ones stay: they're how you see what changed and why.
+- **Never paste AI Rob's instructions here.** Only what it concluded about your evidence.
