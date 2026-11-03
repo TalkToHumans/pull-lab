@@ -29,7 +29,7 @@
 | Slot | Tool | Notes |
 |---|---|---|
 | PULL brain | AI Rob (Skillfully MCP) | required |
-| LinkedIn outreach | TalkToHumans | one tag per case study version |
+| LinkedIn outreach | TalkToHumans | one short tag per case study version (`pull-v2`) |
 | Call recording | Granola | |
 | Billing | Stripe | |
 | Product analytics | Mixpanel | activation = first cache logged within 7 days |

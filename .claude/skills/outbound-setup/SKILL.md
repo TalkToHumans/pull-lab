@@ -1,6 +1,6 @@
 ---
 name: outbound-setup
-description: Import a founder-approved lead list and draft a short outreach sequence for the current case study, with the message from AI Rob and the buyers' own words. With the TalkToHumans MCP it imports the contacts, groups them under the case study version and sets up the sequence as a draft for the founder to review and launch; without it, it writes a CSV with the drafted messages. Use for "launch outreach", "set up a sequence for this list", "draft messages for these people", or after lead-gen.
+description: Import a founder-approved lead list and draft a short outreach sequence for the current case study, with the message from AI Rob and the buyers' own words. With the TalkToHumans MCP it imports the contacts with their signals, groups them under the case study version and sets up the sequence as a draft for the founder to review and launch; without it, it writes a CSV with the drafted messages. Use for "launch outreach", "set up a sequence for this list", "draft messages for these people", or after lead-gen.
 ---
 
 # Outbound setup
@@ -33,9 +33,15 @@ Show the founder the message and the sequence before setting anything up. Defaul
 
 ## 3. Set it up
 
-**With the TalkToHumans MCP:** load its `ground-rules` skill, then `import-and-prep-list` for the import and `write-linkedin-messages` for the drafts, and follow them. Before importing, check that nobody on the list already has a folder in `deals/` or a conversation with the founder; those get a personal note, not a sequence. Group the contacts under the case study version (a tag or a view, e.g. `case study v3 · grizzlies, berry crop failed · 2026-10-17`) so the weekly review can count them. Set the sequence up as a draft and tell the founder where to review and launch it.
+Whatever the tool:
 
-**Without it:** write `outbound/leads/YYYY-MM-DD.csv` with name, link, company, signals, score and the drafted messages, and give the founder the sending order.
+- Before importing, check that nobody on the list already has a folder in `deals/` or a conversation with the founder. Those get a personal note, not a sequence.
+- Group the contacts under the case study version so the weekly review can count them: one short tag per version (e.g. `pull-v3`), and a list or view with the full name (e.g. `case study v3 · grizzlies, berry crop failed · 2026-10-17`).
+- Keep each lead's signals from lead-gen (what happened, date, link) on the contact, so the founder sees why and when to write.
+
+**With the TalkToHumans MCP (recommended):** load its `ground-rules` skill, then `import-and-prep-list` for the import and `write-linkedin-messages` for the drafts, and follow them. Ask before creating the tag. Push the signals with `create_signals`, all of the list in one call, with a stable key per person and signal so a re-run adds nothing. Set the sequence up as a draft and tell the founder where to review and launch it.
+
+**With anything else:** write `outbound/leads/YYYY-MM-DD.csv` with name, link, company, signals, score and the drafted messages, and give the founder the sending order. If the founder uses a CRM, offer to import that CSV with the tag.
 
 ## 4. Record
 

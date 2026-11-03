@@ -15,8 +15,11 @@ Adapted from Egor Kaleynik's [GTM Refinery](https://www.reddit.com/r/B2BRefinery
 
 ## Where signals live
 
+Warmest first: people engaging with your own content, then people posting about the situation and their commenters, then cold leads by company and role.
+
 | Source | What to look for |
 |---|---|
+| Your own posts and profile | Who commented, reacted or viewed your profile lately, and what their comment or profile says about the situation |
 | Job ads | Roles and tools named in the ad |
 | Company websites | New careers pages, new sales or partner pages, new scripts in the page source |
 | Review sites (1 and 2 stars) | Named reviewers leaving a competitor, with the reason |

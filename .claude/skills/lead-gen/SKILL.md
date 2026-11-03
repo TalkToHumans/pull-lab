@@ -27,26 +27,38 @@ Ask AI Rob whether these signals match the situation, if it's loaded for this se
 
 ## 3. Find them
 
-Pick the cheapest source that shows the signal (see "Where signals live" in the playbook):
+Go down this list, warmest first, and stop once you have 20 to 50 candidates for the recipe:
 
-- **TalkToHumans MCP:** load its `ground-rules` skill, then its lead-search skill, and use it first. It also shows people already in the founder's network who match.
-- **Another scraping tool the founder connected:** post search, post comments, job ads, review sites, website change checks. Check its inputs before running it, and give the founder a cost estimate before any batch above a few dollars.
-- **Web search:** threads, reviews, news, company pages.
+1. **People engaging with the founder's own content.** Who commented on their posts or viewed their profile in the last 30 days. They already know the founder. Keep the ones whose comment or profile shows the situation: an engagement alone isn't a need signal.
+2. **People posting about the situation, and who comments on those posts.** Search posts from the last 30 days with the buyers' own words. Keep authors writing in the first person about the Project or a failing option, and commenters adding their own story.
+3. **Cold, by company and role.** Only when 1 and 2 come up short. Qualify the company first (playbook rule 2), then find the person by role. Demographics aren't a signal: check each person's recent posts and company for a need or urgency signal before scoring, and say which leads are cold with no signal.
 
-Never scrape LinkedIn while logged in as the founder.
+The other sources in "Where signals live" in the playbook (job ads, review sites, news, public threads) can feed any step.
 
-Start with 20 to 50 candidates for a new recipe. Read the survivors in full: keep first-person evidence of the situation, not keyword matches or people commenting a keyword to get a lead magnet.
+**With the TalkToHumans MCP (recommended):** load its `ground-rules` skill and follow its credit rules: say the cost and check the balance before more than one page.
+
+1. Own content: the "Engaged with me" contact view, and the engagers of the founder's recent posts (its `content-engagers` skill). Check when they last synced: if nothing is newer than 30 days, go to step 2.
+2. Posts: `search_posts` with the buyers' words as keywords and `posted_within` `month`. Read the authors, then import the commenters of the best posts with `content-engagers`, after the founder's OK on its estimate.
+3. Cold: `search_people`, following its `import-and-prep-list` skill, with `exclude` for competitors. Check a shortlisted person's recent posts with `find_content`.
+
+Its searches run on credits, not on the founder's LinkedIn account. Skip its `icp-scoring` skill: the playbook's score decides here, not demographics.
+
+**With anything else:** a scraping tool the founder connected (post search, post comments, job ads, review sites, website change checks) or web search (threads, reviews, news, company pages). Check a tool's inputs before running it, and give the founder a cost estimate before any batch above a few dollars. Never scrape LinkedIn while logged in as the founder.
+
+Read the survivors in full: keep first-person evidence of the situation, not keyword matches, vendors, or people commenting a keyword to get a lead magnet.
 
 ## 4. Score and cut
 
 Score with the playbook's rules. 7 or more goes on the list, 4 to 6 to a watch list, the rest out. For each person on the list:
 
-| Name | Company | Link | Signals (with dates and links) | Score |
-|---|---|---|---|---|
+| Name | Company | Link | Found via | Signals (with dates and links) | Score |
+|---|---|---|---|---|---|
+
+`Found via` is the step that found them (own content, posts, cold), so the weekly review can compare them.
 
 ## 5. Hand back
 
-- Show the list and the watch list. Say how many candidates you looked at, how many were cut, and why.
+- Show the list and the watch list. Say how many candidates each step looked at, how many were cut, and why.
 - Save the recipe that worked (tool, query, filters, cost) in the case study's section of `outbound/playbook.md`, after the founder's yes.
 - Interesting public posts or reviews that aren't leads go to the situation's file in `evidence/`.
-- Offer [outbound-setup](../outbound-setup/SKILL.md) for the approved list. Don't import anything yourself.
+- Offer [outbound-setup](../outbound-setup/SKILL.md) for the approved list. Don't import the list or draft messages yourself.

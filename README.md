@@ -42,7 +42,7 @@ Want to see it before you set it up? Read [the sample week](examples/honeypot/re
 ```
 
 1. **Case study.** The one situation you're trying to serve, written as PULL in `gtm/case-study.md`. It starts as a guess and gets sharper every week.
-2. **Leads.** `/lead-gen` turns the case study into public signals and finds people showing them recently.
+2. **Leads.** `/lead-gen` turns the case study into public signals and finds people showing them recently, warmest first: people engaging with your content, then people posting about the situation, then cold.
 3. **Outreach.** `/outbound-setup` imports the list and drafts a short sequence. You review and send every message.
 4. **Calls.** `/call-prep` builds a one-screen call script with AI Rob, updates it live as you paste the transcript, and debriefs.
 5. **Memory.** `/deal-review` keeps one file per person in `deals/`: context, PULL, what they pay and use, a timeline, and AI Rob's dated deal reviews. Every call is also logged in `gtm/sales.md`.
@@ -55,8 +55,8 @@ Want to see it before you set it up? Read [the sample week](examples/honeypot/re
 |---|---|---|---|---|
 | Agent | Runs the skills, reads your tools and keeps the files up to date | Yes | [Claude Code](https://claude.com/claude-code) or Claude Cowork | Codex, Cursor (they read `AGENTS.md`) |
 | PULL brain | Judges every call and every week against the PULL framework: is there a real Project, can it wait, which options fail and why | Yes | [AI Rob](https://airobsnyder.com), delivered through the Skillfully MCP | — |
-| Lead sourcing | Find people showing your case study's situation in public, right now | Optional | [TalkToHumans](https://www.talktohumans.app/?utm_source=pull-lab&utm_medium=github&utm_campaign=readme) MCP | Any web search tool |
-| LinkedIn outreach | Import leads, draft sequences, and see who accepted, replied and booked, per outreach angle | Optional | [TalkToHumans](https://www.talktohumans.app/?utm_source=pull-lab&utm_medium=github&utm_campaign=readme) MCP | A CSV and sending by hand |
+| Lead sourcing | Find people showing your case study's situation in public, right now: who engages with your posts, who posts about the situation and who comments on it, then cold leads by company and role | Optional | [TalkToHumans](https://www.talktohumans.app/?utm_source=pull-lab&utm_medium=github&utm_campaign=readme) MCP | Any web search or scraping tool |
+| LinkedIn outreach | Import leads with the signals that found them, draft sequences, and see who accepted, replied and booked, per outreach angle | Optional | [TalkToHumans](https://www.talktohumans.app/?utm_source=pull-lab&utm_medium=github&utm_campaign=readme) MCP | A CSV and sending by hand |
 | Call recording | Keep buyers' exact words. They're the evidence, and your memory of a call isn't | Optional | Granola MCP | Fathom, Fireflies, any transcript you paste |
 | Billing | See who actually paid, trialed or churned. Only a purchase proves PULL | Optional | Stripe MCP | Paste your numbers |
 | Product analytics | Understand signups, activation and retention, and what's actively used or not | Optional | Mixpanel MCP | PostHog MCP |
