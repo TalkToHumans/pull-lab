@@ -32,6 +32,19 @@ Read [the sample week](examples/honeypot/reviews/2026-10-17.md): a startup selli
 6. **Review.** `/weekly-review`, every Friday: outreach, calls, deals, activation and revenue go to AI Rob, which scores the week and names the one bottleneck.
 7. **Iterate.** Fix the bottleneck, update the case study, repeat.
 
+### What it looks like
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/weekly-review.png" alt="The weekly review in chat, on the sample week: where you are, the scorecard against the bar, why it's the bottleneck, first meetings week over week, then the one move for today."/></td>
+    <td width="50%" valign="top"><img src="assets/call-prep.png" alt="Call-prep mid-call, on the sample week: the call rail, what to say now, the PULL sheet filled from the buyer's words, and the playback sentence with the missing slot."/></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Weekly review, in chat</em></td>
+    <td align="center"><em>Call-prep, mid-call</em></td>
+  </tr>
+</table>
+
 ### What you need
 
 | Slot | Why | Required? | What I use | Also works |
