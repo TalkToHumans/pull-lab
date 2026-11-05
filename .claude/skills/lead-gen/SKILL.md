@@ -23,7 +23,7 @@ If the playbook has no signals table for the current version yet, draft one and 
 - **Urgency** (+3 each): the U in the case study happened in the last 30 to 60 days. Older counts 0.
 - **Out:** competitors, people who sell the same thing as a service, anyone the evidence says isn't the buyer.
 
-Ask AI Rob whether these signals match the situation, if it's loaded for this session.
+Load AI Rob (see [Loading AI Rob](../../../AGENTS.md#loading-ai-rob)) and check that the urgency signal is the case study's U, not just something recent. If AI Rob is unavailable, stop and say so.
 
 ## 3. Find them
 
@@ -61,7 +61,7 @@ Read the survivors in full: keep first-person evidence of the situation, not key
 | Name | Deal | Last touch | Their last words | Why they fit the case study | Last next step |
 |---|---|---|---|---|---|
 
-Score everyone else with the playbook's rules. 7 or more goes on the list, 4 to 6 to a watch list, the rest out. For each person on the list:
+Score everyone else with the playbook's rules. 5 or more (a need and an urgency signal) goes on the list, 2 to 4 to a watch list, the rest out. For each person on the list:
 
 | Name | Company | Link | Found via | Signals (with dates and links) | Score |
 |---|---|---|---|---|---|

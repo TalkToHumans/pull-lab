@@ -53,7 +53,7 @@ pull: yes | partial | no
 - **Context, PULL and Account** describe the person now. Update them in place, with the date of the check.
 - **Timeline** only grows.
 - **Deal reviews** follow AI Rob's deal review format. Each new review goes on top; older ones are never edited. Only live opportunities get them: for someone with no demand, a peer or a partner, the context is enough.
-- **Each call** also gets an entry in [gtm/sales.md](../gtm/README.md), which feeds the weekly scorecard.
+- **Each call** also gets a row in [gtm/sales.md](../gtm/README.md), which feeds the weekly scorecard.
 - **`stage` and `pull`** in the frontmatter let the weekly review see what moved (prospect to trial, no PULL to PULL) from the git history.
 
 See [examples/honeypot/deals/](../examples/honeypot/deals/) for six filled-in deals, from a paying grizzly to a partnership pitch.

@@ -15,10 +15,11 @@ Adapted from Egor Kaleynik's [GTM Refinery](https://www.reddit.com/r/B2BRefinery
 
 ## Where signals live
 
-Warmest first: people engaging with your own content, then people posting about the situation and their commenters, then cold leads by company and role.
+Warmest first: your own stalled conversations, then people engaging with your own content, then people posting about the situation and their commenters, then cold leads by company and role.
 
 | Source | What to look for |
 |---|---|
+| Your own conversations | Deals gone quiet, positive replies never booked, trials ended with no card, when their words fit the case study |
 | Your own posts and profile | Who commented, reacted or viewed your profile lately, and what their comment or profile says about the situation |
 | Job ads | Roles and tools named in the ad |
 | Company websites | New careers pages, new sales or partner pages, new scripts in the page source |
@@ -31,7 +32,7 @@ Warmest first: people engaging with your own content, then people posting about 
 
 - +2 per need signal, +3 per urgency signal (older than 60 days counts 0)
 - Your own exclusions: -5 or out (competitors, people who sell the same thing as a service...)
-- Outreach at 7 or more. 4 to 6 goes on a watch list, re-checked monthly.
+- Outreach at 5 or more (a need and an urgency signal). 2 to 4 goes on a watch list, re-checked monthly.
 
 ## Message and sequence (default)
 
@@ -42,7 +43,7 @@ Signals decide **who** and **when**. The message only earns the call. Don't quot
 3. Two to three days later: a one-word bump.
 4. Stop. On a positive reply, propose a specific time ("tomorrow 2pm?").
 
-**Benchmarks per stage:** 30%+ accept, 50%+ reply, 50%+ book. Fix only the stage furthest below its benchmark.
+**Benchmarks per stage:** 30%+ of requests accepted (under 20% is a profile or list problem), 20%+ of accepted connections reply (under 5% is a message problem), 50%+ of replies positive, and most positive replies book a call. Fix only the stage furthest below its benchmark.
 
 ## Per case study version
 

@@ -8,7 +8,7 @@ They're created from AI Rob's own templates the first time you run `/weekly-revi
 |---|---|---|
 | `case-study.md` | The one situation you're trying to serve, written as PULL, with every past version in a dated changelog | weekly-review (proposed, you approve) |
 | `pipeline.md` | First meetings per week, and the numbers per channel and per outreach angle | weekly-review, outbound-setup |
-| `sales.md` | One row per sales call: did they pull, their words, fit, next step, outcome. Feeds the Pull, Close rate and Cycle time standards | deal-review, call-prep |
+| `sales.md` | One row per sales call: did they pull, their words, fit, next step, outcome. Feeds the Pull, Close rate and Cycle time standards | deal-review (after call-prep) |
 | `sales-process.md` | Your call scripts and sales steps | call-prep, on request |
 | `post-sales.md` | What success looks like after the sale, and whether customers reach it | weekly-review, on request |
 

@@ -4,6 +4,7 @@
 
 - **Product:** Honeypot, a stockpile tracker for bears. Log every food cache, and see each morning whether you'll reach den weight before your den date.
 - **Price:** $49/month per den.
+- **Contract size band:** small (under $25k a year).
 - **Who has paid so far:** 60 dens. Most are brown bears in North America. One paid customer this week came from a call (Grizzly Pete); the rest signed up on their own.
 
 ## Stage

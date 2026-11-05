@@ -11,7 +11,7 @@ Four modes: **Prep** (before), **Live** (each transcript chunk), **Full** (the w
 
 AI Rob owns the call's phases, questions, branches, exits and what counts as P, U, L and L (see [Loading AI Rob](../../../AGENTS.md#loading-ai-rob)). For a call script, that means its call-script procedure plus the call skeleton it points to (first call, or second-call prep when a call already happened). This skill owns gathering the data, the screen format and the update loop.
 
-- AI Rob's script lines only ever appear in chat for the current call. Never save them to a file.
+- Never save AI Rob's instructions or its generic call skeleton to a file. Your own script, worded for your case study, can be saved with a date in `gtm/sales-process.md`, as AI Rob's own memory setup does.
 - AI Rob's voice rules apply to everything the founder will say out loud: no dashes in script lines.
 - If AI Rob is unavailable, say so in one line and stop. Don't write a script from memory.
 - Feedback: one AI Rob feedback report per call, sent in Debrief (or at the end of the session if there's no Debrief), never per update.
@@ -72,7 +72,7 @@ Trigger: "call's over", "done", or a final full transcript.
 
 1. One screen, same building blocks: a `## 🏁 Verdict` heading with the one-line verdict, the final 🧩 PULL table, then three bullets: PULL action (quote it or "none"), next meeting (when, or "not booked"), and the one thing that was missing. End with one 💡 coaching line on the move to fix on the next call.
 2. Offer, as one question: run [deal-review](../deal-review/SKILL.md) on the full transcript, which creates or updates the deal, logs the call in `gtm/sales.md` and reviews the deal. Don't run it without a yes.
-3. If the script changed during the call in a way worth keeping, offer to add it to `gtm/sales-process.md` with today's date.
+3. If your script changed during the call in a way worth keeping, offer to add your wording to `gtm/sales-process.md` with today's date.
 4. Send the AI Rob feedback report.
 
 ## Screen format

@@ -8,7 +8,7 @@ Read the relevant files before acting. Don't ask the founder to paste what's alr
 
 | What | File |
 |---|---|
-| What we sell, stage, the one goal, connected tools | [context/company.md](context/company.md) |
+| What we sell, contract size, stage, the one goal, connected tools | [context/company.md](context/company.md) |
 | Who does what, time available | [context/founders.md](context/founders.md) |
 | Product, pricing, activation definition, tracked events | [context/product.md](context/product.md) |
 | **AI Rob's GTM memory.** The case study (read before any targeting, outreach, call prep or review), pipeline, sales log, sales process, post-sales | [gtm/](gtm/README.md) |
@@ -24,7 +24,7 @@ Use the matching skill in [.claude/skills/](.claude/skills/) when a request fits
 - [weekly-review](.claude/skills/weekly-review/SKILL.md): run or update the weekly review. Sets up AI Rob's memory on the first run.
 - [call-prep](.claude/skills/call-prep/SKILL.md): prepare a sales call, follow it live, debrief it.
 - [deal-review](.claude/skills/deal-review/SKILL.md): after any call, reply or email, log it in `gtm/sales.md` and review the deal in `deals/`.
-- [lead-gen](.claude/skills/lead-gen/SKILL.md): turn the case study into public signals and a scored lead list.
+- [lead-gen](.claude/skills/lead-gen/SKILL.md): turn the case study into people to talk to, warmest first: your own stalled conversations, then public signals, scored.
 - [outbound-setup](.claude/skills/outbound-setup/SKILL.md): import an approved list and draft a sequence.
 
 ## Loading AI Rob
@@ -46,7 +46,7 @@ AI Rob's instructions and templates are licensed. Never copy, quote or save them
 
 ## Rules
 
-1. **Only a purchase proves PULL.** Signups, likes, compliments, "I'd buy this" and accepted free trials are not purchases.
+1. **Only a purchase proves the case study.** On a call, a buyer pulls when they start a purchase step themselves: ask the price, the link or how to start, or push for an urgent next step. Anything you offered (a trial, a demo, a follow-up) isn't a pull. Signups, likes, compliments and "I'd buy this" are neither.
 2. **Evidence is the buyer's own words,** with a date and a source. The founder's words never count as buyer evidence, even when the buyer agreed with them.
 3. **Don't assume an ICP.** Classify people from what they did and said, not from who you think the customer should be.
 4. **Add, don't overwrite.** New case study versions, pipeline rows, sales entries, timeline lines and deal reviews are added with a date. Old ones stay. Only the current-state sections of a deal (context, PULL read, account) are updated in place, with the date of the check.

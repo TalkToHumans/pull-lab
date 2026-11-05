@@ -35,7 +35,7 @@ Show the founder the message and the sequence before setting anything up. Defaul
 
 Whatever the tool:
 
-- Before importing, check that nobody on the list already has a folder in `deals/` or a conversation with the founder. Those get a personal note, not a sequence.
+- Before importing, check that nobody on the list already has a folder in `deals/` or a conversation with the founder. Those get a personal note, not a sequence: draft it from their last words in the thread and ask what changed in their situation, to get them back on a call. No pitch.
 - Group the contacts under the case study version so the weekly review can count them: one short tag per version (e.g. `pull-v3`), and a list or view with the full name (e.g. `case study v3 · grizzlies, berry crop failed · 2026-10-17`).
 - Keep each lead's signals from lead-gen (what happened, date, link) on the contact, so the founder sees why and when to write.
 
@@ -46,4 +46,4 @@ Whatever the tool:
 ## 4. Record
 
 - Add the angle as a new row on top of the angles table in `gtm/pipeline.md`, with its start date, the number sent and "too early to tell" as the result. The weekly review fills the result.
-- Tell the founder the benchmarks to watch (30%+ accept, 50%+ reply, 50%+ book) and that the weekly review will report against them.
+- Tell the founder the benchmarks to watch (30%+ accept, 20%+ of accepted reply, 50%+ of replies positive) and that the weekly review will report against them.

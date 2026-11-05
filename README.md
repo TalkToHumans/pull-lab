@@ -51,10 +51,10 @@ Read [the sample week](examples/honeypot/reviews/2026-10-17.md): a startup selli
 |---|---|---|---|---|
 | **Agent** | Runs the skills, reads your tools and keeps the files up to date | Yes | [Claude Code](https://claude.com/claude-code) or Claude Cowork | Codex, Cursor (they read `AGENTS.md`) |
 | **PULL brain** | Judges every call and every week against the PULL framework: is there a real Project, can it wait, which options fail and why | Yes | [AI Rob](https://airobsnyder.com), delivered through the Skillfully MCP | — |
-| **Lead sourcing** | Find people showing your case study's situation in public, right now: who engages with your posts, who posts about the situation and who comments on it, then cold leads by company and role | Optional | [TalkToHumans](https://www.talktohumans.app/?utm_source=pull-lab&utm_medium=github&utm_campaign=readme) MCP | Any web search or scraping tool |
+| **Lead sourcing** | Your own stalled conversations first, then people showing your case study's situation in public, right now: who engages with your posts, who posts about the situation and who comments on it, then cold leads by company and role | Optional | [TalkToHumans](https://www.talktohumans.app/?utm_source=pull-lab&utm_medium=github&utm_campaign=readme) MCP | Any web search or scraping tool |
 | **LinkedIn outreach** | Import leads with the signals that found them, draft sequences, and see who accepted, replied and booked, per outreach angle | Optional | [TalkToHumans](https://www.talktohumans.app/?utm_source=pull-lab&utm_medium=github&utm_campaign=readme) MCP | A CSV and sending by hand |
 | **Call recording** | Keep buyers' exact words. They're the evidence, and your memory of a call isn't | Optional | Granola MCP | Fathom, Fireflies, any transcript you paste |
-| **Billing** | See who actually paid, trialed or churned. Only a purchase proves PULL | Optional | Stripe MCP | Paste your numbers |
+| **Billing** | See who actually paid, trialed or churned. Only a purchase proves the case study | Optional | Stripe MCP | Paste your numbers |
 | **Product analytics** | Understand signups, activation and retention, and what's actively used or not | Optional | PostHog MCP | Mixpanel MCP |
 
 *Every skill runs without the optional tools. It asks you for what it can't fetch and says so in the review.*
@@ -85,7 +85,7 @@ pull-lab/
    ```bash
    git clone git@github.com:<you>/pull-lab.git
    ```
-3. **Open the folder as a project** in Claude Code or Claude Cowork (or Codex, if that's what you use).
+3. **Open the folder as a project** in Claude Code or Claude Cowork (or Codex, if that's what you use). In agents without slash commands, ask in plain words (*"find leads"*): `AGENTS.md` points them to each skill.
 4. **Connect the tools.** AI Rob first ([airobsnyder.com](https://airobsnyder.com)), then the MCPs from [What you need](#what-you-need) that you don't have yet.
 5. **Fill in `context/`.** Ask your agent: *"Help me fill in context/"*. It will ask what you sell, your stage and your one goal with a date.
 6. **Run a first weekly review.** Say *"run my weekly review"*. AI Rob sets up its memory in `gtm/` and `deals/`, loads what your tools already know (past calls, customers, signups, revenue), helps you write the first version of your case study, and names where to start. Want to see a finished week first? Say *"Run /weekly-review on examples/honeypot as a demo."*
@@ -100,14 +100,15 @@ pull-lab/
    - **After:** *"call's over"*, then *"review this call"* (`/deal-review`). Do the same after every reply or email.
 10. **Next Friday, run the weekly review.** It updates your pipeline, deals and playbook itself, and asks before changing the case study. Iterate on the bottleneck it names.
 11. **Find product-market fit,** after many iterations.
+
 ## Make it yours
 
 The choices behind this repo, and how to change them.
 
 Every skill is a plain markdown file in `.claude/skills/`: edit it yourself, or ask your agent to.
 
-- **LinkedIn for outreach.** Nothing to set up (no domains, warm-up or deliverability to manage), you already have an account and a network to start from, and reply rates of 20 to 30% are reachable once the opener is tuned. Cold email works too, it's just more to run before you've found PULL. To switch, edit `/outbound-setup` to draft for your email tool.
+- **LinkedIn for outreach.** Nothing to set up (no domains, warm-up or deliverability to manage), you already have an account and a network to start from, and 20 to 30% of accepted connections replying is reachable once the opener is tuned. Cold email works too, it's just more to run before you've found PULL. To switch, edit `/outbound-setup` to draft for your email tool.
 - **One case study at a time.** Growth comes from repeating one situation, not serving many. To test a second one, run it as a separate sprint (`/lead-gen` asks).
-- **Only a purchase proves PULL.** Signups, compliments and free trials don't count. This is the core of the method, so keep it.
+- **Only a purchase proves the case study.** On a call, a buyer pulls when they start the next step themselves, like asking the price. A trial you offered, signups and compliments don't count. This is the core of the method, so keep it.
 - **AI Rob makes every PULL judgment.** The skills gather and file the evidence, AI Rob scores it. Without it, they stop instead of guessing.
 - **Folder and file names.** `deals/`, `gtm/`, `reviews/` and the rest are just names. If you prefer different terms, ask your agent to rename them and update every link and skill that points to them.

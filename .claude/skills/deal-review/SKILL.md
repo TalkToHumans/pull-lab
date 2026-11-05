@@ -8,7 +8,7 @@ description: Keep one file per person you're selling to, current after every tou
 Every time something happens with someone you're selling to (a reply, a call, an email, a "no", silence), run this. It keeps two files current:
 
 - [deals/](../../../deals/README.md)`<person-company>/deal.md`: everything about this person, so the next conversation starts from context. The format is in [deals/README.md](../../../deals/README.md).
-- [gtm/sales.md](../../../gtm/README.md): one entry per sales call, in AI Rob's format. It feeds the weekly scorecard.
+- [gtm/sales.md](../../../gtm/README.md): one row per sales call. It feeds the weekly scorecard.
 
 AI Rob owns every judgment here: whether the buyer pulled, P, U, L+L, fit with the case study, the deal stage, the next steps (see [Loading AI Rob](../../../AGENTS.md#loading-ai-rob)). This skill gathers the evidence, adds the context and account facts, and writes the files. If AI Rob is unavailable, stop and say so.
 

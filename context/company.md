@@ -7,6 +7,7 @@
 
 - **Product:** <!-- one sentence, in a buyer's words if you have them -->
 - **Price:** <!-- e.g. $49/month per seat -->
+- **Contract size band:** <!-- big ($100k+), moderate ($25k to $99k) or small (under $25k), by first-year contract value. It sets the scorecard bars. -->
 - **Who has paid so far:** <!-- facts only: names or counts, and what they use it for. Not an ICP. -->
 
 ## Stage
