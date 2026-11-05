@@ -22,29 +22,10 @@ Read [the sample week](examples/honeypot/reviews/2026-10-17.md): a startup selli
 
 ### The weekly loop
 
-```
-            ┌──────────────────────────────────────────┐
-            │  gtm/case-study.md                       │
-            │  who has PULL, and every past version    │
-            └──────────────────────────────────────────┘
-   7. iterate ▲                                │ 1. case study
-              │                                ▼
- 6. /weekly-review                       2. /lead-gen
- AI Rob scores the week,                 find people showing the
- names ONE bottleneck                    situation in public
-              ▲                                │
-              │                                ▼
- 5. /deal-review                         3. /outbound-setup
- one file per person: context,           import + draft a sequence,
- PULL, usage, AI Rob's review            you review and send
-              ▲                                │
-              └──────── 4. /call-prep ◄────────┘
-                  prep with AI Rob, record,
-                  debrief into a PULL sheet
-```
+<img src="assets/weekly-loop.png" alt="The weekly loop: 1. case study (Claude), 2. find leads (/lead-gen, TalkToHumans), 3. start outreach (/outbound-setup, TalkToHumans), 4. have calls (/call-prep, Granola), 5. track every deal (/deal-review, Stripe and PostHog), 6. weekly review (/weekly-review, AI Rob), 7. fix the bottleneck, update the case study, repeat." width="100%"/>
 
 1. **Case study.** The one situation you're trying to serve, written as PULL in `gtm/case-study.md`. It starts as a guess and gets sharper every week.
-2. **Leads.** `/lead-gen` turns the case study into public signals and finds people showing them recently, warmest first: people engaging with your content, then people posting about the situation, then cold.
+2. **Leads.** `/lead-gen` turns the case study into public signals and finds people showing them recently, warmest first: your own stalled conversations, then people engaging with your content, then people posting about the situation, then cold.
 3. **Outreach.** `/outbound-setup` imports the list and drafts a short sequence. You review and send every message.
 4. **Calls.** `/call-prep` builds a one-screen call script with AI Rob, updates it live as you paste the transcript, and debriefs.
 5. **Memory.** `/deal-review` keeps one file per person in `deals/`: context, PULL, what they pay and use, a timeline, and AI Rob's dated deal reviews. Every call is also logged in `gtm/sales.md`.
@@ -61,7 +42,7 @@ Read [the sample week](examples/honeypot/reviews/2026-10-17.md): a startup selli
 | **LinkedIn outreach** | Import leads with the signals that found them, draft sequences, and see who accepted, replied and booked, per outreach angle | Optional | [TalkToHumans](https://www.talktohumans.app/?utm_source=pull-lab&utm_medium=github&utm_campaign=readme) MCP | A CSV and sending by hand |
 | **Call recording** | Keep buyers' exact words. They're the evidence, and your memory of a call isn't | Optional | Granola MCP | Fathom, Fireflies, any transcript you paste |
 | **Billing** | See who actually paid, trialed or churned. Only a purchase proves PULL | Optional | Stripe MCP | Paste your numbers |
-| **Product analytics** | Understand signups, activation and retention, and what's actively used or not | Optional | Mixpanel MCP | PostHog MCP |
+| **Product analytics** | Understand signups, activation and retention, and what's actively used or not | Optional | PostHog MCP | Mixpanel MCP |
 
 *Every skill runs without the optional tools. It asks you for what it can't fetch and says so in the review.*
 

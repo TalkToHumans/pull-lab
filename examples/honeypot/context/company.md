@@ -32,5 +32,5 @@
 | LinkedIn outreach | TalkToHumans | one short tag per case study version (`pull-v2`) |
 | Call recording | Granola | |
 | Billing | Stripe | |
-| Product analytics | Mixpanel | activation = first cache logged within 7 days |
+| Product analytics | PostHog | activation = first cache logged within 7 days |
 | Lead sourcing | TalkToHumans | ranger reports, campsite news |
