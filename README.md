@@ -2,11 +2,11 @@
 
 # PULL Lab
 
-Pre-PMF, you know the **pain cave**: lots of "wow, this is amazing", **nobody buys**, so you build another feature.
+Pre-PMF, you know the pain cave: lots of "wow, this is amazing", nobody buys, so you build another feature.
 
-But you don't need a GTM strategy. You need **ONE customer who actually wants to buy**, then **another one just like them**.
+But you don't need a GTM strategy. You need ONE customer who actually wants to buy, then another one just like them.
 
-PULL Lab is an **AI company OS** that runs that loop with you, **every week**, using Rob Snyder's PULL framework and ai-rob skill:
+PULL Lab is an AI company OS that runs that loop with you, every week, using Rob Snyder's PULL framework and ai-rob skill:
 
 - **You find who would be weird NOT to buy.** Your case study gets sharper every week, in your buyers' own words.
 
@@ -14,7 +14,7 @@ PULL Lab is an **AI company OS** that runs that loop with you, **every week**, u
 
 Built with [Rob Snyder](https://robsnyder.org/) and [TalkToHumans](https://www.talktohumans.app/?utm_source=github&utm_medium=readme&utm_campaign=pull-lab).
 
-Want to see it before you set it up?
+**Want to see it before you set it up?**
 
 Read [the sample week](examples/honeypot/reviews/2026-10-17.md): a startup selling to bears, where the review catches a signup spike made of raccoons.
 
@@ -108,11 +108,12 @@ pull-lab/
 11. **Find product-market fit,** after many iterations.
 ## Make it yours
 
-The choices behind this repo, and how to change them. Every skill is a plain markdown file in `.claude/skills/`: edit it yourself, or ask your agent to.
+The choices behind this repo, and how to change them.
+
+Every skill is a plain markdown file in `.claude/skills/`: edit it yourself, or ask your agent to.
 
 - **LinkedIn for outreach.** Nothing to set up (no domains, warm-up or deliverability to manage), you already have an account and a network to start from, and reply rates of 20 to 30% are reachable once the opener is tuned. Cold email works too, it's just more to run before you've found PULL. To switch, edit `/outbound-setup` to draft for your email tool.
 - **One case study at a time.** Growth comes from repeating one situation, not serving many. To test a second one, run it as a separate sprint (`/lead-gen` asks).
 - **Only a purchase proves PULL.** Signups, compliments and free trials don't count. This is the core of the method, so keep it.
 - **AI Rob makes every PULL judgment.** The skills gather and file the evidence, AI Rob scores it. Without it, they stop instead of guessing.
-- **Drafts, never sends.** You review and send every message yourself.
-- **The weekly review updates records itself, and asks about the case study.** Pipeline rows, deals and the playbook are applied directly; a new case study version waits for your yes. Rule 5 in `AGENTS.md` sets this.
+- **Folder and file names.** `deals/`, `gtm/`, `reviews/` and the rest are just names. If you prefer different terms, ask your agent to rename them and update every link and skill that points to them.
