@@ -4,6 +4,6 @@ One file per week, written by [weekly-review](../.claude/skills/weekly-review/SK
 
 - File name: `YYYY-MM-DD.md`, the last day of the 7-day window (usually a Friday).
 - Facts first, with their source and date range. Interpretation only in the bottleneck sections.
-- Proposed changes to the case study, pipeline and deals are listed at the end. The review applies only the ones you say yes to.
+- Changes are listed at the end. Pipeline rows, deal reviews and playbook recipes are applied directly. A new case study version waits for your yes.
 
 See [examples/honeypot/reviews/2026-10-17.md](../examples/honeypot/reviews/2026-10-17.md) for a finished one.

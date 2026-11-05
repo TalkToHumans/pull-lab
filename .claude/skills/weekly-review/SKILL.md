@@ -1,6 +1,6 @@
 ---
 name: weekly-review
-description: Run the weekly PULL review. Use when the founder asks to run, draft or update the weekly review, the Friday review, their scorecard, or "what should I focus on next week". Pulls the week's outreach, calls, deals, activation and revenue from whatever tools are connected, runs the evidence through AI Rob against its six standards, and writes reviews/YYYY-MM-DD.md with a scorecard, what the data says, one bottleneck, the move, and proposed changes to AI Rob's memory files. Sets that memory up on the first run. Also runs as a demo on examples/honeypot.
+description: Run the weekly PULL review. Use when the founder asks to run, draft or update the weekly review, the Friday review, their scorecard, or "what should I focus on next week". Pulls the week's outreach, calls, deals, activation and revenue from whatever tools are connected, runs the evidence through AI Rob against its six standards, and writes reviews/YYYY-MM-DD.md with a scorecard, what the data says, one bottleneck and the move. Shows four visuals in chat (where you are, scorecard, why it's the bottleneck, week over week). Applies the pipeline rows, deal reviews and playbook changes itself, and asks only before changing the case study. Sets AI Rob's memory up on the first run. Also runs as a demo on examples/honeypot.
 ---
 
 # Weekly review
@@ -11,7 +11,7 @@ The skill collects and organizes the evidence. AI Rob makes every PULL judgment,
 
 ## Demo mode
 
-When the founder asks for a demo, or names `examples/honeypot`: treat `examples/honeypot/` as the repo root, read the tool outputs from `examples/honeypot/data/` instead of calling live tools, skip the intake questions, and write the result to the chat (don't overwrite `examples/honeypot/reviews/`). End by pointing at the finished example to compare.
+When the founder asks for a demo, or names `examples/honeypot`: treat `examples/honeypot/` as the repo root, read the tool outputs from `examples/honeypot/data/` instead of calling live tools, skip the intake questions, and write the result to the chat (don't overwrite `examples/honeypot/reviews/`, and apply nothing). Show the visuals as in step 8. End by pointing at the finished example to compare.
 
 ## First run
 
@@ -42,7 +42,7 @@ Read-only everywhere. This skill never sends, imports, edits or deletes anything
 
 - **Outreach.** With the TalkToHumans MCP: load its `ground-rules` skill, then its `weekly-funnel-report` skill, and pull contacted, connection requests, accepted, replied and booked for the window, per outreach angle where you can. Name who replied and who booked. Without it: ask.
 - **Calls.** With a call recorder MCP (Granola, Fathom...): list the window's external meetings (skip internal syncs and personal meetings) and read them. Check each one has an entry in `gtm/sales.md`; list the ones that don't.
-- **Deals.** `git log --since=<start> --name-status -- deals/ gtm/` plus uncommitted changes. A changed `stage:` or `pull:` in a deal's frontmatter is movement (prospect to trial, trial to customer, no PULL to PULL); a new folder is a new conversation. Also list the live deals with no new timeline line this week, and their last next step.
+- **Deals.** `git log --since=<start> --name-status -- deals/ gtm/` plus uncommitted changes. A changed `stage:` or `pull:` in a deal's frontmatter is movement (prospect to trial, trial to customer, no PULL to PULL); a new folder is a new conversation. Also list the stalled deals: no new timeline line in 14+ days and no next meeting booked, positive replies that never booked, trials that ended with no card. Note which ones fit the current case study.
 - **Activation.** With Mixpanel or PostHog: signups in the window, how many reached the activation event from `context/product.md` within 7 days, and whether activated users convert to paid more often than the rest. Where most signups came from, if the tool knows.
 - **Revenue.** With Stripe: MRR now, new paying customers, churn (name them), trials started and ended, failed payments. Keep comps, one-offs and trials out of MRR.
 
@@ -62,13 +62,15 @@ Load AI Rob. Give it evidence, not conclusions: its memory files from step 2, th
 
 Ask it for its weekly scorecard and plan:
 
+- Which gate of its sequence the founder is at (who has PULL, one case study, repeats 3 to 5, factory), and why.
 - The six standards, scored for this week against the bars for this company's contract size: this week's number, the bar, pass / miss / unknown.
 - The **one** bottleneck, and why it's that one and not the others.
+- The one comparison that proves it (for example, who this week's meetings were with and which pulled, or requests sent against the weekly cap). It becomes visual 3.
 - The move: what to change, the one-hour action for today, and what to do if that stalls.
 - Maintenance: what to keep running, time-boxed.
 - What does **not** look like the bottleneck right now, even if it's tempting.
-- A debug of last week's plan: did it run, what did it show.
-- Any change it would make to the case study, the pipeline file or a deal.
+- A debug of last week's plan: did it run, what did it show, and the failing standard's number over the last weeks (from `gtm/pipeline.md`, `gtm/sales.md` and past reviews).
+- Any change it would make to the case study, the pipeline file, the playbook or a deal.
 
 Save only its conclusions about this week's evidence. Never save its instructions.
 
@@ -81,10 +83,13 @@ Sources: [tools used] · Not connected: [tools] · AI Rob
 
 > **This week in one line:** [what happened and what it means, in under 30 words]
 
+**Where you are:** ✅ who has PULL › ✅ one case study › ▶ repeats 3 to 5 ([n] of 3) › ○ factory
+
 ## Scorecard
 
-| Standard | This week | Bar | |
-|---|---|---|---|
+| Standard | This week | Bar | | |
+|---|---|---|---|---|
+| 2. Pipeline | 6 first meetings | 15/week | `██████░░░░░░░░░` | ❌ Miss |
 
 ## Deals that moved
 
@@ -93,6 +98,8 @@ Sources: [tools used] · Not connected: [tools] · AI Rob
 | [Name](../deals/name/deal.md) | [before] → [after] | [yes/partial/no] | [deal stage, what they pay and use] | [next step] |
 
 **Churned:** [names, or "none"]
+
+**Stalled and fit [version]:** [n: names, linked to their deals, or "none"]. `/lead-gen` lists them first, with their last words.
 
 ## Did they pull?
 
@@ -112,6 +119,8 @@ Checked against the current case study ([version]: [one-line who]).
 ## 1. The bottleneck: [name]
 [why this one]
 
+[the comparison that proves it, as text bars]
+
 **The move:** [what changes]
 **Today, in one hour:** [one concrete action]
 **If that stalls:**
@@ -125,11 +134,17 @@ Checked against the current case study ([version]: [one-line who]).
 
 **Debug line:** [last week's plan, what happened, what it means]
 
-## Proposed changes (not applied)
+[the failing standard over the last weeks, as text bars against its bar]
+
+## Changes
+
+**Applied:**
+- `gtm/pipeline.md`: [this week's rows, angles kept or retired]
+- `deals/...`: [deals reviewed, follow-ups due]
+- `outbound/playbook.md`: [recipes added or dropped]
+
+**Needs your yes:**
 - `gtm/case-study.md`: [the new version's PULL sentence, quoted in full, and the evidence behind it]
-- `gtm/pipeline.md`: [this week's rows, angles to keep or retire]
-- `deals/...`: [deals to review, follow-ups due]
-- `outbound/playbook.md`: [recipes to add or drop]
 ```
 
 Rules:
@@ -138,16 +153,41 @@ Rules:
 - Quotes in "Did they pull?" are the buyer's words, 15 words max, never the founder's.
 - Every claim about a person links to their deal or their `sales.md` entry.
 - Say what wasn't available. Don't let a missing tool read as a zero.
+- Text bars are 15 characters wide (`█` filled, `░` empty), scaled to the bar, so a pass fills the line. An unknown standard gets `? ? ? ? ? ? ? ?` instead of a bar. The file stays plain markdown so it reads the same anywhere.
 - Keep it to what fits on two screens. The founder should be able to act on it in five minutes.
 
-## 7. Finish
+## 7. Apply the records
 
-Tell the founder: the file written, what was missing, and the proposed changes. Ask, as one question, which ones to apply. On a yes:
+These are records of what happened, dated and added on top, so apply them without asking (skip in demo mode):
 
-- `gtm/case-study.md`: replace the current version and add a dated entry on top of the changelog saying what changed and why. Never delete an old version.
-- `gtm/pipeline.md`: add the week's dated rows on top. Never edit old rows.
-- Deals: run [deal-review](../deal-review/SKILL.md).
+- `gtm/pipeline.md`: add the week's dated rows on top. Never edit old rows. Mark angles to keep or retire.
+- Deals: run [deal-review](../deal-review/SKILL.md) on the deals AI Rob named, and on the calls with no `gtm/sales.md` entry.
+- `outbound/playbook.md`: add or drop the recipes AI Rob named, with today's date.
+
+**Never apply the case study.** It's the PULL hypothesis every other skill targets from, and the founder has context AI Rob doesn't. It waits for a yes (AGENTS.md rule 5).
+
+## 8. Finish in chat
+
+The chat reply is short: the founder reads it, the file holds the detail.
+
+1. **This week in one line.**
+2. **Four visuals**, in this order:
+   1. **Where you are:** AI Rob's gates as a strip, the current one marked. It's why a big miss on a later standard may not be the priority.
+   2. **Scorecard vs the bar:** one row per standard, with how far this week's number is from its bar. Pass and miss each carry an icon and a label, never color alone. Unknown is hatched: a missing number is a finding.
+   3. **Why it's the bottleneck:** the comparison AI Rob gave in step 5. This one changes every week; pick the form that fits it (one tile per meeting, a meter against a cap, two bars side by side).
+   4. **Did last week's move work?** The failing standard week over week, with its bar as a dashed line.
+3. **The bottleneck** and **today, in one hour**, two lines.
+4. **What was applied** (one line: pipeline rows, deals, playbook) and **what was missing** (tools not connected).
+5. **One question:** apply the case study change? Show the new PULL sentence. If there's no case study change, end without a question.
+
+How to show the visuals:
+
+- **If the agent can render visuals inline** (a chart or widget tool, or artifacts), draw all four in one visual, using the agent's chart guidance for colors and dark mode. Keep tables and prose out of the visual: they go in the reply text.
+- **Otherwise** (a terminal, Codex, Cursor), show the same four blocks with the text bars from the review file, in a code block so they line up.
+- Nothing else gets a chart. Outreach angles, activation and revenue stay as text in the file: the bottleneck outranks them.
+
+On a yes to the case study: replace the current version in `gtm/case-study.md` and add a dated entry on top of the changelog saying what changed and why. Never delete an old version.
 
 ## Unattended mode
 
-For a scheduled run with nobody to answer: skip step 4, write inferred items with a `**TO CONFIRM:**` prefix, add a final `## Open questions` section with the intake questions that still matter and what the tools showed, and apply nothing.
+For a scheduled run with nobody to answer: skip step 4, write inferred items with a `**TO CONFIRM:**` prefix, and add a final `## Open questions` section with the intake questions that still matter and what the tools showed. Apply the records (step 7) as usual. Leave the case study change under "Needs your yes" for the founder's next session.

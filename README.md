@@ -63,6 +63,8 @@ Want to see it before you set it up? Read [the sample week](examples/honeypot/re
 
 Every skill runs without the optional tools. It asks you for what it can't fetch and says so in the review.
 
+**Why LinkedIn for outreach:** nothing to set up (no domains, warm-up or deliverability to manage), you already have an account and a network to start from, and reply rates of 20 to 30% are reachable once the opener is tuned. Cold email works too, it's just more to run before you've found PULL.
+
 ### What's inside
 
 ```
@@ -97,6 +99,9 @@ pull-lab/
 
 7. **Find leads.** *"Find leads"* (`/lead-gen`).
 8. **Start outreach.** *"Launch outreach for this list"* (`/outbound-setup`). You review and send.
-9. **Have calls, and record them.** *"Prep my call with Jane"* before (`/call-prep`), *"review this call"* after, and after every reply or email too (`/deal-review`).
-10. **Next Friday, run the weekly review.** Apply the changes you agree with, and iterate on the bottleneck it names.
+9. **Have calls, and record them.**
+   - **Before:** *"Prep my call with Jane"* (`/call-prep`) gives you a one-screen script.
+   - **During:** put your call on the left and the chat on the right. Every few minutes, paste the transcript so far (Granola lets you copy it mid-call), or just say *"update"*. The screen tells you what to say next.
+   - **After:** *"call's over"*, then *"review this call"* (`/deal-review`). Do the same after every reply or email.
+10. **Next Friday, run the weekly review.** It updates your pipeline, deals and playbook itself, and asks before changing the case study. Iterate on the bottleneck it names.
 11. **Find product-market fit,** after many iterations.
