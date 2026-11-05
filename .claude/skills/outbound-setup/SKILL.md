@@ -45,5 +45,5 @@ Whatever the tool:
 
 ## 4. Record
 
-- Add the angle with its date to "angles tried" in `gtm/pipeline.md`, result "too early to tell". The weekly review fills the result.
+- Add the angle as a new row on top of the angles table in `gtm/pipeline.md`, with its start date, the number sent and "too early to tell" as the result. The weekly review fills the result.
 - Tell the founder the benchmarks to watch (30%+ accept, 50%+ reply, 50%+ book) and that the weekly review will report against them.

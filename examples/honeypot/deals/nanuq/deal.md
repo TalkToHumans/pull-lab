@@ -15,10 +15,13 @@ pull: no
 ## PULL (latest read, 2026-10-14)
 
 - **Pulled?** No.
-- **Project:** get onto the ice as soon as it forms. "My whole year is the ice. When it freezes, I eat."
-- **Unavoidable:** strong, but for a Project Honeypot doesn't serve: a stockpile doesn't move the ice date.
-- **Options + Limitations:** waiting on the shore, the only option, and not one we can fix.
 - **Fits the case study?** No. A real deadline, but no stockpile.
+
+| | What it is | In their words |
+|---|---|---|
+| **P** · Project | Get onto the ice as soon as it forms. | "My whole year is the ice. When it freezes, I eat." |
+| **U** · Unavoidable | Strong, but for a Project Honeypot doesn't serve: a stockpile doesn't move the ice date. | |
+| **L** · Waiting on the shore | The only option, and not one we can fix. | |
 
 ## Account (checked 2026-10-17)
 

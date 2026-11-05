@@ -15,8 +15,11 @@ pull: no
 ## PULL (latest read, 2026-10-16)
 
 - **Pulled?** No. He's selling, not buying.
-- **Project:** fire safety awareness, not a stockpile.
 - **Fits the case study?** No. A possible channel to grizzlies later, not a buyer. Building the API he asked for wouldn't be a test of demand.
+
+| | What it is | In their words |
+|---|---|---|
+| **P** · Project | Fire safety awareness, not a stockpile. | "Build the API and we'll promote it." |
 
 ## Account (checked 2026-10-17)
 

@@ -15,13 +15,15 @@ pull: yes
 ## PULL (latest read, 2026-10-16)
 
 - **Pulled?** Yes. He asked the price on the first call ("How much? ... Fine. I'll do it tonight.") and paid three days later, before any onboarding.
-- **Project:** reach 180 kg before Nov 20. "I need 180 kilos by the 20th or I don't wake up in April."
-- **Unavoidable:** the den date doesn't move, and denning short means not waking up.
-- **Options + Limitations:**
-  - Forage harder: "Every hour I walk burns what I ate that hour."
-  - Caches in his head: "Wolves found three of them last week."
-  - The campsite: "The rangers have my picture now."
 - **Fits the case study?** Yes, he's the source of v2.
+
+| | What it is | In their words |
+|---|---|---|
+| **P** · Project | Reach 180 kg before Nov 20. | "I need 180 kilos by the 20th or I don't wake up in April." |
+| **U** · Unavoidable | The den date doesn't move, and denning short means not waking up. | |
+| **L** · Forage harder | Walking burns what he eats. | "Every hour I walk burns what I ate that hour." |
+| **L** · Caches in his head | Wolves find them. | "Wolves found three of them last week." |
+| **L** · The campsite | It brings rangers. | "The rangers have my picture now." |
 
 ## Account (checked 2026-10-17)
 

@@ -29,7 +29,7 @@ Load AI Rob. Give it the new input, the whole deal file, the case study and the 
 - **For a live opportunity:** also ask for its deal review, in its `deal.md` format.
 - **Always:** whether this person fits the current case study, and why.
 
-If `gtm/sales.md` doesn't exist yet, create it from AI Rob's own template (it ships with AI Rob; this repo doesn't copy it).
+If `gtm/sales.md` doesn't exist yet, create it from AI Rob's own template (it ships with AI Rob; this repo doesn't copy it), with the calls as the table described in [gtm/README.md](../../../gtm/README.md).
 
 ## 3. Write `deals/<person-company>/deal.md`
 
@@ -37,14 +37,14 @@ Follow the structure in [deals/README.md](../../../deals/README.md):
 
 - **Frontmatter:** `stage` from billing first (Stripe is the truth for customer, trial and former), then the conversation; `pull` from AI Rob's read.
 - **Context:** who, source, what they used before us, links. Add what's new; fix what's wrong.
-- **PULL (latest read):** replace it with AI Rob's new read, dated, with the buyer's own words. Never the founder's words.
+- **PULL (latest read):** replace it with AI Rob's new read, dated: the two verdict lines, then the P, U and L table with the buyer's own words. Never the founder's words.
 - **Account:** replace it with today's check, dated.
 - **Timeline:** add one line per event, oldest first.
 - **Deal reviews:** for a live opportunity, add AI Rob's new review on top. Never edit an older one. No review for people with no demand, peers or partners: say so in one line instead.
 
 ## 4. Write `gtm/sales.md` (calls only)
 
-Add the call on top in AI Rob's entry format, with a link to the deal file, and update the rollup lines. Fill the outcome of earlier entries when you learn it.
+Add the call as a new row on top of the Calls table (columns in [gtm/README.md](../../../gtm/README.md)), linked to the deal file, and update the rollup lines. P, U and L+L go in the deal file, not here. Fill the outcome of earlier rows when you learn it.
 
 ## 5. Report
 

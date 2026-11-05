@@ -15,7 +15,7 @@ Everything here is made up. Any resemblance to real bears is a coincidence.
 | [gtm/pipeline.md](gtm/pipeline.md) | Two weeks of first meetings, per channel and per outreach angle |
 | [gtm/sales.md](gtm/sales.md) | Every call since Sep 29, from a clear PULL purchase to a polite "so cute!" |
 | [deals/](deals/) | Six bears with their context, PULL, account and timeline. The three live deals also have AI Rob's reviews: Grizzly Pete (paid), Ursula's sloth (trial), Mei Mei (trial, no PULL) |
-| [data/2026-10-17.md](data/2026-10-17.md) | What the tools returned for the week (outreach, calls, analytics, billing), so the demo runs with nothing connected |
+| [tool-outputs/2026-10-17.md](tool-outputs/2026-10-17.md) | What the tools returned for the week (outreach, calls, analytics, billing), so the demo runs with nothing connected |
 | [reviews/2026-10-17.md](reviews/2026-10-17.md) | The finished weekly review |
 
 ## Run the demo
@@ -24,7 +24,7 @@ Open the repo in Claude Code (or Cowork) with AI Rob connected and say:
 
 > Run /weekly-review on examples/honeypot as a demo.
 
-It reads the files and `data/` instead of live tools, runs the evidence through AI Rob, and writes the review in the chat. Compare it with [the finished one](reviews/2026-10-17.md). AI Rob won't word it the same way twice, but it should find the same bottleneck.
+It reads the files and `tool-outputs/` instead of live tools, runs the evidence through AI Rob, and writes the review in the chat. Compare it with [the finished one](reviews/2026-10-17.md). AI Rob won't word it the same way twice, but it should find the same bottleneck.
 
 ## What to notice
 

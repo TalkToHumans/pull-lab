@@ -15,10 +15,13 @@ pull: no
 ## PULL (latest read, 2026-10-14)
 
 - **Pulled?** No. She loved the demo ("Oh, it's so cute!") and took the trial Goldie offered at the end of the call. Our step, not hers.
-- **Project:** not established. She described the patch, not an outcome she has to reach.
-- **Unavoidable:** none. "I don't hibernate, so there's always more bamboo tomorrow."
-- **Options + Limitations:** walking the patch works for her: "I just walk over and look. It's nice."
 - **Fits the case study?** No. She's the v1 situation, and v1 had no deadline in 5 calls.
+
+| | What it is | In their words |
+|---|---|---|
+| **P** · Project | Not established. She described the patch, not an outcome she has to reach. | |
+| **U** · Unavoidable | None. | "I don't hibernate, so there's always more bamboo tomorrow." |
+| **L** · Walking the patch | Works for her. | "I just walk over and look. It's nice." |
 
 ## Account (checked 2026-10-17)
 

@@ -11,16 +11,16 @@ The skill collects and organizes the evidence. AI Rob makes every PULL judgment,
 
 ## Demo mode
 
-When the founder asks for a demo, or names `examples/honeypot`: treat `examples/honeypot/` as the repo root, read the tool outputs from `examples/honeypot/data/` instead of calling live tools, skip the intake questions, and write the result to the chat (don't overwrite `examples/honeypot/reviews/`, and apply nothing). Show the visuals as in step 8. End by pointing at the finished example to compare.
+When the founder asks for a demo, or names `examples/honeypot`: treat `examples/honeypot/` as the repo root, read the tool outputs from `examples/honeypot/tool-outputs/` instead of calling live tools, skip the intake questions, and write the result to the chat (don't overwrite `examples/honeypot/reviews/`, and apply nothing). Show the visuals as in step 8. End by pointing at the finished example to compare.
 
 ## First run
 
 When `gtm/case-study.md` doesn't exist yet:
 
-1. Load AI Rob and follow its setup for founder memory: create `gtm/case-study.md`, `gtm/pipeline.md`, `gtm/sales.md`, `gtm/sales-process.md` and `gtm/post-sales.md` from its own templates, and use `deals/` for deal folders. The templates ship with AI Rob; never copy them into this repo's public files.
+1. Load AI Rob and follow its setup for founder memory: create `gtm/case-study.md`, `gtm/pipeline.md`, `gtm/sales.md`, `gtm/sales-process.md` and `gtm/post-sales.md` from its own templates, in the table layouts described in [gtm/README.md](../../../gtm/README.md), and use `deals/` for deal folders. The templates ship with AI Rob; never copy them into this repo's public files.
 2. Widen the window to the last 90 days, so the review starts from everything the tools already know.
 3. After step 3, list the past calls and live conversations with no entry in `gtm/sales.md`, and offer to run [deal-review](../deal-review/SKILL.md) on them, starting with paying customers.
-4. In step 5, ask AI Rob to draft the first version of the case study from that evidence. Write it into `gtm/case-study.md` only after the founder agrees with it.
+4. In step 5, ask AI Rob to draft the first version of the case study from that evidence. Write it into `gtm/case-study.md` only after the founder agrees with it, with the broken-out PULL as the table described in [gtm/README.md](../../../gtm/README.md).
 
 ## 1. Window and file
 
@@ -160,7 +160,7 @@ Rules:
 
 These are records of what happened, dated and added on top, so apply them without asking (skip in demo mode):
 
-- `gtm/pipeline.md`: add the week's dated rows on top. Never edit old rows. Mark angles to keep or retire.
+- `gtm/pipeline.md`: add the week's rows on top of its tables. Never edit old rows. Fill the result of each angle, and mark the ones to keep or retire.
 - Deals: run [deal-review](../deal-review/SKILL.md) on the deals AI Rob named, and on the calls with no `gtm/sales.md` entry.
 - `outbound/playbook.md`: add or drop the recipes AI Rob named, with today's date.
 
@@ -186,7 +186,7 @@ How to show the visuals:
 - **Otherwise** (a terminal, Codex, Cursor), show the same four blocks with the text bars from the review file, in a code block so they line up.
 - Nothing else gets a chart. Outreach angles, activation and revenue stay as text in the file: the bottleneck outranks them.
 
-On a yes to the case study: replace the current version in `gtm/case-study.md` and add a dated entry on top of the changelog saying what changed and why. Never delete an old version.
+On a yes to the case study: replace the current version in `gtm/case-study.md` and add a dated entry on top of the changelog saying what changed and why. Never delete an old version. Write the broken-out PULL as the table described in [gtm/README.md](../../../gtm/README.md).
 
 ## Unattended mode
 

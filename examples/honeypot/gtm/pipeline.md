@@ -4,17 +4,12 @@ As of 2026-10-17, before this week's review. Honeypot is a small contract ($49/m
 
 ## Top-line (all channels combined)
 
-### 2026-10-10 week of
+Newest week first.
 
-- First meetings this week: 2 (bar 15, miss)
-- Of those, with real demand and a fit: 0 (both pandas)
-- Notes: the week went to finishing the panda calls.
-
-### 2026-10-03 week of
-
-- First meetings this week: 1 (bar 15, miss)
-- Of those, with real demand and a fit: 0
-- Notes: rewrote the case study for grizzlies after Grizzly Pete's DM.
+| Week of | First meetings | Bar | With demand and a fit | Notes |
+|---|---|---|---|---|
+| 2026-10-10 | 2 | 15 · miss | 0 (both pandas) | The week went to finishing the panda calls. |
+| 2026-10-03 | 1 | 15 · miss | 0 | Rewrote the case study for grizzlies after Grizzly Pete's DM. |
 
 ## By channel
 
@@ -22,13 +17,17 @@ As of 2026-10-17, before this week's review. Honeypot is a small contract ($49/m
 
 **Weekly numbers:**
 
-- 2026-10-10 contacted: 190 | requests: 110 | accepted: 53 (48%) | replied: 17 (8.9%) | meetings: 2 held
-- 2026-10-03 contacted: 120 | requests: 90 | accepted: 41 (46%) | replied: 6 (5%) | meetings: 1 held
+| Week of | Contacted | Requests | Accepted | Replied | Meetings held |
+|---|---|---|---|---|---|
+| 2026-10-10 | 190 | 110 | 53 (48%) | 17 (8.9%) | 2 |
+| 2026-10-03 | 120 | 90 | 41 (46%) | 6 (5%) | 1 |
 
 **Angles tried:**
 
-- 2026-10-06 tried: "Saw you fishing at Brooks Falls" (their spot, no pitch) -> too early to tell
-- 2026-09-26 tried: "Grow your fat reserves 10x" (a promise) -> 3% reply rate so far
+| Started | Angle | Sent | Reply rate | Result |
+|---|---|---|---|---|
+| 2026-10-06 | "Saw you fishing at Brooks Falls" (their spot, no pitch) | | | Too early to tell |
+| 2026-09-26 | "Grow your fat reserves 10x" (a promise) | | 3% | 3% reply rate so far |
 
 ## Notes on what is working
 

@@ -11,17 +11,15 @@ As of 2026-10-17, before this week's review.
 **Demand (PULL), as one sentence:**
 > I believe a brown bear, in a year their berry crop or salmon run failed and with their den date weeks away, has to reach den weight before they den, and considers foraging harder, keeping caches in their head, or raiding campsites, but finds that walking burns what they eat, wolves find the caches they forget, and campsites bring rangers.
 
-- **Project (P):** reach den weight before the den date. Grizzly Pete: 180 kg by Nov 20, from 150 kg today.
-- **Unavoidable (U):** the den date doesn't move, and denning short means not waking up in spring ("I need 180 kilos by the 20th or I don't wake up in April").
-- **Options + Limitations (L+L):**
-  - Forage harder: "Every hour I walk burns what I ate that hour."
-  - Keep caches in their head: "Wolves found three of them last week."
-  - Raid campsites: "The rangers have my picture now."
-  - In a sloth sharing one spot, count out loud: "We count twice, so we think we're fine, and then February comes."
-
-**Supply (your fit):**
-
-- **Positioning:** a cache log with a den-weight forecast, so a bear eats in the right order and knows every morning whether they'll make weight. For a sloth, one shared den where each bear logs their own catch.
+| | What it is | In their words |
+|---|---|---|
+| **P** · Project | Reach den weight before the den date. Grizzly Pete: 180 kg by Nov 20, from 150 kg today. | "Berries are gone this year and I'm 30 kilos short." |
+| **U** · Unavoidable | The den date doesn't move, and denning short means not waking up in spring. | "I need 180 kilos by the 20th or I don't wake up in April." |
+| **L** · Forage harder | Walking burns what they eat. | "Every hour I walk burns what I ate that hour." |
+| **L** · Caches in their head | Wolves find the ones they forget. | "Wolves found three of them last week." |
+| **L** · Raid campsites | Campsites bring rangers. | "The rangers have my picture now." |
+| **L** · Count out loud (a sloth sharing one spot) | They count twice and think they're fine. | "We count twice, so we think we're fine, and then February comes." |
+| **Supply** · Positioning | A cache log with a den-weight forecast, so a bear eats in the right order and knows every morning whether they'll make weight. For a sloth, one shared den where each bear logs their own catch. | |
 
 **Proof:**
 

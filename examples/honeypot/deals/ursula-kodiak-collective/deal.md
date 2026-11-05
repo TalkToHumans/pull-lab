@@ -15,12 +15,14 @@ pull: yes
 ## PULL (latest read, 2026-10-15)
 
 - **Pulled?** Yes. She started a trial for the whole sloth after the call and asked: "Can you set up all twelve of us before the run's over? After that it's too late to fix the count."
-- **Project:** every bear in the sloth reaches den weight from one shared spot. "Twelve of us fish the same spot and nobody knows who ate what."
-- **Unavoidable:** the salmon run ends around Oct 31, and after that the count can't be fixed.
-- **Options + Limitations:**
-  - Counting out loud: "We count twice, so we think we're fine, and then February comes."
-  - The tally on the tree: nobody updates it.
 - **Fits the case study?** Yes, v2: a food source ending before the den date. Her twist is twelve bears on one spot, which the case study doesn't name yet.
+
+| | What it is | In their words |
+|---|---|---|
+| **P** · Project | Every bear in the sloth reaches den weight from one shared spot. | "Twelve of us fish the same spot and nobody knows who ate what." |
+| **U** · Unavoidable | The salmon run ends around Oct 31, and after that the count can't be fixed. | "After that it's too late to fix the count." |
+| **L** · Counting out loud | They count twice and think they're fine. | "We count twice, so we think we're fine, and then February comes." |
+| **L** · The tally on the tree | Nobody updates it. | |
 
 ## Account (checked 2026-10-17)
 

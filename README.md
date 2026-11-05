@@ -2,11 +2,11 @@
 
 # PULL Lab
 
-Pre-PMF, you know the pain cave: lots of "wow, this is amazing", nobody buys, so you build another feature.
+Pre-PMF, you know the **pain cave**: lots of "wow, this is amazing", **nobody buys**, so you build another feature.
 
-But you don't need a GTM strategy. You need ONE customer who actually wants to buy, then another one just like them.
+But you don't need a GTM strategy. You need **ONE customer who actually wants to buy**, then **another one just like them**.
 
-PULL Lab is an AI company OS that runs that loop with you, every week, using Rob Snyder's [PULL framework](https://thephysicsofstartups.substack.com/p/the-pull-framework) and [ai-rob skill](https://airobsnyder.com):
+PULL Lab is an **AI company OS** that runs that loop with you, **every week**, using Rob Snyder's PULL framework and ai-rob skill:
 
 - **You find who would be weird NOT to buy.** Your case study gets sharper every week, in your buyers' own words.
 
@@ -14,7 +14,9 @@ PULL Lab is an AI company OS that runs that loop with you, every week, using Rob
 
 Built with [Rob Snyder](https://robsnyder.org/) and [TalkToHumans](https://www.talktohumans.app/?utm_source=github&utm_medium=readme&utm_campaign=pull-lab).
 
-Want to see it before you set it up? Read [the sample week](examples/honeypot/reviews/2026-10-17.md): a startup selling to bears, where the review catches a signup spike made of raccoons.
+Want to see it before you set it up?
+
+Read [the sample week](examples/honeypot/reviews/2026-10-17.md): a startup selling to bears, where the review catches a signup spike made of raccoons.
 
 ## How it works
 
@@ -53,17 +55,15 @@ Want to see it before you set it up? Read [the sample week](examples/honeypot/re
 
 | Slot | Why | Required? | What I use | Also works |
 |---|---|---|---|---|
-| Agent | Runs the skills, reads your tools and keeps the files up to date | Yes | [Claude Code](https://claude.com/claude-code) or Claude Cowork | Codex, Cursor (they read `AGENTS.md`) |
-| PULL brain | Judges every call and every week against the PULL framework: is there a real Project, can it wait, which options fail and why | Yes | [AI Rob](https://airobsnyder.com), delivered through the Skillfully MCP | — |
-| Lead sourcing | Find people showing your case study's situation in public, right now: who engages with your posts, who posts about the situation and who comments on it, then cold leads by company and role | Optional | [TalkToHumans](https://www.talktohumans.app/?utm_source=pull-lab&utm_medium=github&utm_campaign=readme) MCP | Any web search or scraping tool |
-| LinkedIn outreach | Import leads with the signals that found them, draft sequences, and see who accepted, replied and booked, per outreach angle | Optional | [TalkToHumans](https://www.talktohumans.app/?utm_source=pull-lab&utm_medium=github&utm_campaign=readme) MCP | A CSV and sending by hand |
-| Call recording | Keep buyers' exact words. They're the evidence, and your memory of a call isn't | Optional | Granola MCP | Fathom, Fireflies, any transcript you paste |
-| Billing | See who actually paid, trialed or churned. Only a purchase proves PULL | Optional | Stripe MCP | Paste your numbers |
-| Product analytics | Understand signups, activation and retention, and what's actively used or not | Optional | Mixpanel MCP | PostHog MCP |
+| **Agent** | Runs the skills, reads your tools and keeps the files up to date | Yes | [Claude Code](https://claude.com/claude-code) or Claude Cowork | Codex, Cursor (they read `AGENTS.md`) |
+| **PULL brain** | Judges every call and every week against the PULL framework: is there a real Project, can it wait, which options fail and why | Yes | [AI Rob](https://airobsnyder.com), delivered through the Skillfully MCP | — |
+| **Lead sourcing** | Find people showing your case study's situation in public, right now: who engages with your posts, who posts about the situation and who comments on it, then cold leads by company and role | Optional | [TalkToHumans](https://www.talktohumans.app/?utm_source=pull-lab&utm_medium=github&utm_campaign=readme) MCP | Any web search or scraping tool |
+| **LinkedIn outreach** | Import leads with the signals that found them, draft sequences, and see who accepted, replied and booked, per outreach angle | Optional | [TalkToHumans](https://www.talktohumans.app/?utm_source=pull-lab&utm_medium=github&utm_campaign=readme) MCP | A CSV and sending by hand |
+| **Call recording** | Keep buyers' exact words. They're the evidence, and your memory of a call isn't | Optional | Granola MCP | Fathom, Fireflies, any transcript you paste |
+| **Billing** | See who actually paid, trialed or churned. Only a purchase proves PULL | Optional | Stripe MCP | Paste your numbers |
+| **Product analytics** | Understand signups, activation and retention, and what's actively used or not | Optional | Mixpanel MCP | PostHog MCP |
 
-Every skill runs without the optional tools. It asks you for what it can't fetch and says so in the review.
-
-**Why LinkedIn for outreach:** nothing to set up (no domains, warm-up or deliverability to manage), you already have an account and a network to start from, and reply rates of 20 to 30% are reachable once the opener is tuned. Cold email works too, it's just more to run before you've found PULL.
+*Every skill runs without the optional tools. It asks you for what it can't fetch and says so in the review.*
 
 ### What's inside
 
@@ -85,7 +85,8 @@ pull-lab/
 
 ### Set up (once)
 
-1. **Fork it, privately.** Click **Use this template** → **Create a new repository** → **Private**. A regular fork of a public repo stays public, and your copy will hold your customers' words.
+1. **Fork it, privately.** Click **Use this template** → **Create a new repository** → **Private**.\
+   *(A regular fork of a public repo stays public, and your copy will hold your customers' words.)*
 2. **Clone it locally.**
    ```bash
    git clone git@github.com:<you>/pull-lab.git
@@ -105,3 +106,13 @@ pull-lab/
    - **After:** *"call's over"*, then *"review this call"* (`/deal-review`). Do the same after every reply or email.
 10. **Next Friday, run the weekly review.** It updates your pipeline, deals and playbook itself, and asks before changing the case study. Iterate on the bottleneck it names.
 11. **Find product-market fit,** after many iterations.
+## Make it yours
+
+The choices behind this repo, and how to change them. Every skill is a plain markdown file in `.claude/skills/`: edit it yourself, or ask your agent to.
+
+- **LinkedIn for outreach.** Nothing to set up (no domains, warm-up or deliverability to manage), you already have an account and a network to start from, and reply rates of 20 to 30% are reachable once the opener is tuned. Cold email works too, it's just more to run before you've found PULL. To switch, edit `/outbound-setup` to draft for your email tool.
+- **One case study at a time.** Growth comes from repeating one situation, not serving many. To test a second one, run it as a separate sprint (`/lead-gen` asks).
+- **Only a purchase proves PULL.** Signups, compliments and free trials don't count. This is the core of the method, so keep it.
+- **AI Rob makes every PULL judgment.** The skills gather and file the evidence, AI Rob scores it. Without it, they stop instead of guessing.
+- **Drafts, never sends.** You review and send every message yourself.
+- **The weekly review updates records itself, and asks about the case study.** Pipeline rows, deals and the playbook are applied directly; a new case study version waits for your yes. Rule 5 in `AGENTS.md` sets this.

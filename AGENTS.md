@@ -54,4 +54,4 @@ AI Rob's instructions and templates are licensed. Never copy, quote or save them
 6. **Draft, never send.** Never send a message, connection request or email on the founder's behalf.
 7. **Say what you couldn't check.** If a tool wasn't connected or returned nothing, write that, not a zero.
 8. **This repo holds customer data.** Keep it private. Never paste its contents into public content without the founder's go-ahead.
-9. **`examples/` is sample data.** Ignore it when reading real evidence. When the founder asks for a demo, treat `examples/honeypot/` as the repo root and read its `data/` folder instead of calling live tools.
+9. **`examples/` is sample data.** Ignore it when reading real evidence. When the founder asks for a demo, treat `examples/honeypot/` as the repo root and read its `tool-outputs/` folder instead of calling live tools.

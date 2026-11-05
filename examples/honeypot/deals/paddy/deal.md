@@ -15,10 +15,13 @@ pull: no
 ## PULL (latest read, 2026-10-16)
 
 - **Pulled?** No, curiosity only. He asked to "keep in touch".
-- **Project:** not established. "I'd love to keep track of my marmalade."
-- **Unavoidable:** none. He has never run out.
-- **Options + Limitations:** the sandwich under his hat works.
 - **Fits the case study?** No. No den date, no shortage.
+
+| | What it is | In their words |
+|---|---|---|
+| **P** · Project | Not established. | "I'd love to keep track of my marmalade." |
+| **U** · Unavoidable | None. He has never run out. | |
+| **L** · A sandwich under his hat | Works. | |
 
 ## Account (checked 2026-10-17)
 

@@ -30,8 +30,13 @@ pull: yes | partial | no
 
 ## PULL (latest read, YYYY-MM-DD)
 - **Pulled?** the step they took on their own, quoted, or "no"
-- **P / U / L+L:** in their words
 - **Fits the case study?** which version, and why or why not
+
+| | What it is | In their words |
+|---|---|---|
+| **P** · Project | what they're trying to get done | "quote" |
+| **U** · Unavoidable | why it can't wait, or "none" | "quote" |
+| **L** · [option] | its limitation (one row per option) | "quote" |
 
 ## Account (checked YYYY-MM-DD)
 - **Pays:** plan, amount, since when, invoices, trial end, cancellation reason
