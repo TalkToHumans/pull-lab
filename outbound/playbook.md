@@ -15,11 +15,12 @@ Adapted from Egor Kaleynik's [GTM Refinery](https://www.reddit.com/r/B2BRefinery
 
 ## Where signals live
 
-Warmest first: your own stalled conversations, then people engaging with your own content, then people posting about the situation and their commenters, then cold leads by company and role.
+The lead gen waterfall, warmest first, until the week's quota is met: signups and trials you haven't had a call with; then leads buried in your inbox and follow-ups owed; then people who engaged with your content or viewed your profile and fit the case study; then people posting about the situation and their commenters; then cold leads by role and company size. The quota comes from your funnel (contacted to first meeting, last 4 to 6 weeks in `gtm/pipeline.md`), capped by what your accounts can send in a week. How it's computed is in the [lead-gen skill](../.claude/skills/lead-gen/SKILL.md).
 
 | Source | What to look for |
 |---|---|
-| Your own conversations | Deals gone quiet, positive replies never booked, trials ended with no card, when their words fit the case study |
+| Your own signups and trials | People who signed up in the last 60 days and never had a call, what they did in the product, and whether they fit the case study's Who |
+| Your own inbox | Replies you never answered, positive replies never booked, deals gone quiet, trials ended with no card |
 | Your own posts and profile | Who commented, reacted or viewed your profile lately, and what their comment or profile says about the situation |
 | Job ads | Roles and tools named in the ad |
 | Company websites | New careers pages, new sales or partner pages, new scripts in the page source |
@@ -31,8 +32,10 @@ Warmest first: your own stalled conversations, then people engaging with your ow
 ## Scoring (keep it dumb)
 
 - +2 per need signal, +3 per urgency signal (older than 60 days counts 0)
+- +2 warm: commented on, reacted to or viewed your profile or posts in the last 30 days. It's not a need signal: a warm lead still needs one in their own words to pass 5
 - Your own exclusions: -5 or out (competitors, people who sell the same thing as a service...)
 - Outreach at 5 or more (a need and an urgency signal). 2 to 4 goes on a watch list, re-checked monthly.
+- Cold leads found by role and company size alone go on their own list, marked "cold, no signal", to fill the week's quota. The weekly review compares how they convert with the warmer sources.
 
 ## Message and sequence (default)
 
