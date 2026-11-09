@@ -1,6 +1,6 @@
 ---
 name: deal-review
-description: Keep one file per person you're selling to, current after every touch. After a call, reply, email or "no", updates deals/<person-company>/deal.md (context, latest PULL read, billing and usage, timeline, and for live opportunities a dated AI Rob deal review on top) and logs calls in gtm/sales.md. Drafts the reply when one is owed (saved in TalkToHumans when connected, never sent). Use for "review this call", "log this call", "where is the deal with X", "what do I do with X", "add X to deals", after a call-prep debrief, or when the weekly review proposes it.
+description: Keep one file per person you're selling to, current after every touch. After a call, reply, email or "no", updates deals/<person-company>/deal.md (context, latest PULL read, billing and usage, timeline, and for live opportunities a dated AI Rob deal review on top) and logs calls in gtm/sales.md. Use for "review this call", "log this call", "where is the deal with X", "what do I do with X", "add X to deals", after a call-prep debrief, or when the weekly review proposes it.
 ---
 
 # Deal review
@@ -46,17 +46,9 @@ Follow the structure in [deals/README.md](../../../deals/README.md):
 
 Add the call as a new row on top of the Calls table (columns in [gtm/README.md](../../../gtm/README.md)), linked to the deal file, and update the rollup lines. P, U and L+L go in the deal file, not here. Fill the outcome of earlier rows when you learn it.
 
-## 5. Draft the reply (when one is owed)
+## 5. Report
 
-Don't wait to be asked. Whenever they wrote and are waiting for an answer, or AI Rob's next step is a message, draft it as part of the review. AI Rob decides what the message has to do (usually: get them back on a call, never progress the deal in writing); write it in the founder's voice, short.
-
-- **With the TalkToHumans MCP:** `load_skill` `write-linkedin-messages` and follow it. Check the conversation for an existing draft and the contact's `sequence` first: a new draft replaces the old one, so if there's one, ask before replacing it. Save it with `write_message_draft` on the thread's `conversation_id`, and give the founder the link to review it (the thread, or their drafts view).
-- **Without it:** put the message in the report, ready to paste.
-- **Never send.** A follow-up weeks away isn't staged as a draft: what to send depends on what happens before then. Put its date and its hook in the deal review's next steps instead.
-
-## 6. Report
-
-In a few lines: did they pull (with the quote), what moved since the last touch, the next step, the drafted reply (or where it's saved), and whether this evidence supports or contradicts the current case study. If it contradicts it, propose the change to `gtm/case-study.md`; don't make it.
+In a few lines: did they pull (with the quote), what moved since the last touch, the next step, and whether this evidence supports or contradicts the current case study. If it contradicts it, propose the change to `gtm/case-study.md`; don't make it.
 
 If nothing moved since the last review, say so: a deal that doesn't move between two reviews is itself the finding.
 

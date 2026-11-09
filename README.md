@@ -28,7 +28,7 @@ Read [the sample week](examples/honeypot/reviews/2026-10-17.md): a startup selli
 2. **Leads.** `/lead-gen` works out how many people you need to contact this week from your funnel, then fills that quota warmest first: signups you haven't had a call with, leads buried in your inbox and follow-ups owed, people engaging with your content, people posting about the situation, then cold.
 3. **Outreach.** `/outbound-setup` imports the list and drafts a short sequence. You review and send every message.
 4. **Calls.** `/call-prep` builds a one-screen call script with AI Rob, updates it live as you paste the transcript, and debriefs.
-5. **Memory.** `/deal-review` keeps one file per person in `deals/`: context, PULL, what they pay and use, a timeline, and AI Rob's dated deal reviews. Every call is also logged in `gtm/sales.md`, and when a reply is owed it drafts it for you to send.
+5. **Memory.** `/deal-review` keeps one file per person in `deals/`: context, PULL, what they pay and use, a timeline, and AI Rob's dated deal reviews. Every call is also logged in `gtm/sales.md`.
 6. **Review.** `/weekly-review`, every Friday: outreach, calls, deals, activation and revenue go to AI Rob, which scores the week and names the one bottleneck.
 7. **Iterate.** Fix the bottleneck, update the case study, repeat.
 
@@ -97,7 +97,7 @@ pull-lab/
 9. **Have calls, and record them.**
    - **Before:** *"Prep my call with Jane"* (`/call-prep`) gives you a one-screen script.
    - **During:** put your call on the left and the chat on the right. Every few minutes, paste the transcript so far (Granola lets you copy it mid-call), or just say *"update"*. The screen tells you what to say next.
-   - **After:** *"call's over"*, then *"review this call"* (`/deal-review`). Do the same after every reply or email: it also drafts your answer, in TalkToHumans if it's connected. You review and send.
+   - **After:** *"call's over"*, then *"review this call"* (`/deal-review`). Do the same after every reply or email.
 10. **Next Friday, run the weekly review.** It updates your pipeline, deals and playbook itself, and asks before changing the case study. Iterate on the bottleneck it names.
 11. **Find product-market fit,** after many iterations.
 
