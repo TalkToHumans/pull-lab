@@ -16,7 +16,11 @@ Built with [Rob Snyder](https://robsnyder.org/) and [TalkToHumans](https://www.t
 
 **Want to see it before you set it up?**
 
-Read [the sample week](examples/honeypot/reviews/2026-10-17.md): a startup selling to bears, where the review catches a signup spike made of raccoons.
+Watch the 3-minute walkthrough:
+
+<a href="https://youtu.be/brofjNE3kTg"><img src="assets/video-thumbnail.jpg" alt="Watch the 3-minute PULL Lab walkthrough on YouTube: Rob Snyder's PULL Framework, Run by Claude Code." width="100%"/></a>
+
+Or read [the sample week](examples/honeypot/reviews/2026-10-17.md): a startup selling to bears, where the review catches a signup spike made of raccoons.
 
 ## How it works
 
