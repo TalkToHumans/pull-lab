@@ -13,7 +13,6 @@ Read the relevant files before acting. Don't ask the founder to paste what's alr
 | Product, pricing, activation definition, tracked events | [context/product.md](context/product.md) |
 | **AI Rob's GTM memory.** The case study (read before any targeting, outreach, call prep or review), pipeline, sales log, sales process, post-sales | [gtm/](gtm/README.md) |
 | One file per person you're selling to: context, PULL, what they pay and use, timeline, and AI Rob's deal reviews | [deals/](deals/README.md) |
-| Public signals per buyer situation | [evidence/](evidence/README.md) |
 | How we find people: signals and sourcing recipes | [outbound/playbook.md](outbound/playbook.md) |
 | Weekly reviews | [reviews/](reviews/README.md) |
 

@@ -67,7 +67,6 @@ pull-lab/
 ├── context/               # company, founders, product: read before every task
 ├── gtm/                   # AI Rob's memory: case study, pipeline, sales log, sales process, post-sales
 ├── deals/                 # one file per person: context, PULL, account, timeline, AI Rob's reviews
-├── evidence/              # public signals (posts, reviews, job ads) per buyer situation
 ├── outbound/              # signals and sourcing recipes
 ├── reviews/               # one weekly review per Friday
 ├── assets/                # README images

@@ -96,5 +96,4 @@ Score everyone else with the playbook's rules. 5 or more (a need and an urgency 
 
 - Show the quota and how far each step got toward it, then the list and the watch list. Say how many candidates each step looked at, how many were cut, and why. If the quota isn't met, say how short it is and which source would close the gap.
 - Save the recipe that worked (tool, query, filters, cost) in the case study's section of `outbound/playbook.md`, after the founder's yes.
-- Interesting public posts or reviews that aren't leads go to the situation's file in `evidence/`.
 - Offer [outbound-setup](../outbound-setup/SKILL.md) for the approved list. Don't import the list or draft messages yourself. Signups and follow-ups get a personal note there, not a sequence: its only job is to get them on a call by asking what changed in their situation, never to pitch.
