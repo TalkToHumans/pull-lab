@@ -80,20 +80,31 @@ Read the survivors in full: keep first-person evidence of the situation, not key
 
 ## 5. Score and cut
 
-**Follow-ups first.** The people from steps 1 and 2 aren't scored. List them on top, buried replies first, with their last words, the date, and the last next step:
+**Follow-ups first.** The people from steps 1 and 2 aren't scored. Keep for each: the deal, the last touch date, their last words, why they fit the case study, the next step, and any date that matters (a trial end, an event). Buried replies first, then positive replies that never booked, then signups, then stalled deals.
 
-| Name | Deal | Last touch | Their last words | Why they fit the case study | Last next step |
-|---|---|---|---|---|---|
+Score everyone else with the playbook's rules. 5 or more (a need and an urgency signal, or the version's own exception) goes on the list, 2 to 4 to a watch list, the rest out. Cold leads from step 5 go on their own block, below the scored one, marked "cold, no signal" unless a post gave them one. Keep for each: company, link, found via (signups, inbox, warm, posts, cold, so the weekly review can compare steps), each signal with its date and link, and the score.
 
-Score everyone else with the playbook's rules. 5 or more (a need and an urgency signal, or the version's own exception) goes on the list, 2 to 4 to a watch list, the rest out. Cold leads from step 5 go on their own list, below the scored one, marked "cold, no signal" unless a post gave them one. For each person:
+## 6. Hand back, in the chat
 
-| Name | Company | Link | Found via | Signals (with dates and links) | Score |
-|---|---|---|---|---|---|
+**No file.** Don't write a lead-list file. The list lives in the chat, and once approved, on the contacts in the outreach tool (tag, signals, notes), or in the CSV outbound-setup writes when there's no tool. The only write is the playbook recipe after the founder's yes.
 
-`Found via` is the step that found them (signups, inbox, warm, posts, cold), so the weekly review can compare them.
+The founder reads this on a screen, fast. Structure over sentences: no paragraphs, every quote 10 words or fewer, every number with its unit, icons always next to a label (never color alone). Always this layout, in this order:
 
-## 6. Hand back
+1. **Headline**, one line: `Week of {date} · {case study version} · {n} people · expected {m} of {target} meetings · short {gap}`.
+2. **Visual 1 · the quota.** One meter per source (follow-ups, signups, posts, cold): expected meetings against the target, with the rate it used and its sample size. Beside it: connection requests planned against the weekly cap.
+3. **Visual 2 · the waterfall.** One bar per step: looked at, kept, and the main cut reason in 5 words or fewer. Tool costs at the end.
+4. **The people, one card or row each, in blocks with a header:** Reply first · Yes, not booked · Signups · Stalled and fit · Scored · Cold. Each shows:
+   - name (linked) and company;
+   - the score as blocks, not prose: `▲` per need, `⚡` per urgency, `♨` warm, then the number (`▲▲▲ · 6`, `▲ ⚡ · 5`);
+   - why, in 8 words or fewer;
+   - their last words, 10 words or fewer (follow-ups only);
+   - the next step, 6 words or fewer;
+   - the date that matters, with a ⏰.
+5. **Watch list**: one line of names with their score. **Out**: one line of counts per reason.
+6. **What I'd change in sourcing**, at most 3 bullets, only when the run taught something.
+7. **One question:** approve the list, with any cuts?
 
-- Show the quota and how far each step got toward it, then the list and the watch list. Say how many candidates each step looked at, how many were cut, and why. If the quota isn't met, say how short it is and which source would close the gap.
+How to show it: when the agent can render visuals inline (a widget or chart tool), put items 1 to 5 in one visual, as large as it needs to be: meters, bars and a card per person, grouped by block. Then keep the chat reply to items 6 and 7. Otherwise (a terminal), show the meters and bars as text bars in a code block, and the people as one table per block.
+
 - Save the recipe that worked (tool, query, filters, cost) in the case study's section of `outbound/playbook.md`, after the founder's yes.
 - **Then draft, in the same session.** As soon as the founder approves the list (with any cuts), run [outbound-setup](../outbound-setup/SKILL.md) on the approved rows. Don't stop to offer it, and pass on what this run already read so it isn't read again. Signups and follow-ups get a personal note there, not a sequence: its only job is to get them on a call by asking what changed in their situation, never to pitch. Approving the list is the founder's one stop before the drafts; nothing is sent.

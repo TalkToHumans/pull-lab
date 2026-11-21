@@ -29,7 +29,7 @@ Show the founder the message and the sequence before setting anything up. Defaul
 1. Day 0: connection request, no note.
 2. Day after accept: the message.
 3. Two to three days later: the bump.
-4. Stop.
+4. Stop. On a positive reply, never send the booking link alone: "Awesome, let's do it! Do you have a calendar link I can use? If not, how's later today? Mine if easier: {link}". No booking after 24 hours: a bump. One more follow-up 48 hours later, then stop.
 
 ## 3. Set it up
 
@@ -46,4 +46,16 @@ Whatever the tool:
 ## 4. Record
 
 - Add the angle as a new row on top of the angles table in `gtm/pipeline.md`, with its start date, the number sent and "too early to tell" as the result. The weekly review fills the result.
-- Tell the founder the benchmarks to watch (30%+ accept, 20%+ of accepted reply, 50%+ of replies positive) and that the weekly review will report against them.
+
+## 5. Hand back, in the chat
+
+No file beyond the CSV that the no-tool path needs. Same style as lead-gen's hand-back: structure over sentences, no paragraphs, quotes 10 words or fewer. Always this layout:
+
+1. **Headline**, one line: `{n} drafts staged · {k} sequences · {p} personal notes · nothing sent`.
+2. **One card per template or variant:** its name, how many people it goes to, then each step with its day offset (`D0 request` · `D+1 message` · `D+3 bump`), and the first message filled in for one real lead. When two variants are tested, put their cards side by side with the one word that differs highlighted.
+3. **Personal notes:** one row each with name, their last words (10 words or fewer), and the drafted note.
+4. **Checks**, as a checklist with ✓ or ✗: nobody already in `deals/` or in a conversation, the tag, the template used, people already in another sequence. Every ✗ names who to fix and how.
+5. **What to watch:** the three benchmarks as targets (30%+ accept, 20%+ of accepted reply, 50%+ of replies positive), and that the weekly review reports against them.
+6. **Where to review the drafts** and **one question:** anything to change before you launch?
+
+How to show it: when the agent can render visuals inline, items 1 to 5 go in one visual, and the chat keeps the review link and the question. Otherwise, use a table per block.
