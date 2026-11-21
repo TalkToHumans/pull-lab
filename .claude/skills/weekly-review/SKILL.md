@@ -178,7 +178,8 @@ The chat reply is short: the founder reads it, the file holds the detail.
    4. **Did last week's move work?** The failing standard week over week, with its bar as a dashed line.
 3. **The bottleneck** and **today, in one hour**, two lines.
 4. **What was applied** (one line: pipeline rows, deals, playbook) and **what was missing** (tools not connected).
-5. **One question:** apply the case study change? Show the new PULL sentence. If there's no case study change, end without a question.
+5. **One question:** apply the case study change? Show the new PULL sentence.
+6. **Then the next batch.** If the move needs new people to contact, or deals are stalled and fit, offer to run [lead-gen](../lead-gen/SKILL.md) for next week: one yes takes it through to the approved list and the drafted outreach. Ask it after the case study answer, or as the only question when there's no case study change. Otherwise end without a question.
 
 How to show the visuals:
 

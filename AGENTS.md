@@ -23,8 +23,8 @@ Use the matching skill in [.claude/skills/](.claude/skills/) when a request fits
 - [weekly-review](.claude/skills/weekly-review/SKILL.md): run or update the weekly review. Sets up AI Rob's memory on the first run.
 - [call-prep](.claude/skills/call-prep/SKILL.md): prepare a sales call, follow it live, debrief it.
 - [deal-review](.claude/skills/deal-review/SKILL.md): after any call, reply or email, log it in `gtm/sales.md` and review the deal in `deals/`.
-- [lead-gen](.claude/skills/lead-gen/SKILL.md): turn the case study into people to talk to, warmest first: your own stalled conversations, then public signals, scored.
-- [outbound-setup](.claude/skills/outbound-setup/SKILL.md): import an approved list and draft a sequence.
+- [lead-gen](.claude/skills/lead-gen/SKILL.md): turn the case study into people to talk to, warmest first: your own stalled conversations, then public signals, scored. Once you approve the list, it runs outbound-setup to draft the outreach.
+- [outbound-setup](.claude/skills/outbound-setup/SKILL.md): import an approved list and draft a sequence. lead-gen runs it for you; run it alone for a CSV or names.
 
 ## Loading AI Rob
 

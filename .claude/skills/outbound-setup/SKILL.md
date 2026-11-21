@@ -1,6 +1,6 @@
 ---
 name: outbound-setup
-description: Import a founder-approved lead list and draft a short outreach sequence for the current case study, with the message from AI Rob and the buyers' own words. With the TalkToHumans MCP it imports the contacts with their signals, groups them under the case study version and sets up the sequence as a draft for the founder to review and launch; without it, it writes a CSV with the drafted messages. Use for "launch outreach", "set up a sequence for this list", "draft messages for these people", or after lead-gen.
+description: Import a founder-approved lead list and draft a short outreach sequence for the current case study, with the message from AI Rob and the buyers' own words. With the TalkToHumans MCP it imports the contacts with their signals, groups them under the case study version and sets up the sequence as a draft for the founder to review and launch; without it, it writes a CSV with the drafted messages. Use for "launch outreach", "set up a sequence for this list", or "draft messages for these people". lead-gen runs it right after the founder approves a list; run it on its own for a CSV or names from elsewhere.
 ---
 
 # Outbound setup
@@ -11,7 +11,7 @@ Get an approved list into a sequence the founder can review and launch, grouped 
 
 ## 1. Inputs
 
-- An approved list (from [lead-gen](../lead-gen/SKILL.md), a CSV, or names). If it's missing, ask.
+- An approved list (from [lead-gen](../lead-gen/SKILL.md), a CSV, or names). If it's missing, ask. When lead-gen hands over in the same session, reuse what it already read (the case study, the buyers' words, the playbook section, the angles tried) instead of reading it again.
 - The current version of `gtm/case-study.md`, and its section in `outbound/playbook.md`.
 - The `gtm/sales.md` entries of buyers who pulled: their words are the raw material for the message.
 - The "angles tried" in `gtm/pipeline.md`: what already worked and what didn't.

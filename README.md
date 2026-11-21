@@ -23,8 +23,8 @@ Built with [Rob Snyder](https://robsnyder.org/) and [TalkToHumans](https://www.t
 <img src="assets/weekly-loop.png" alt="The weekly loop: 1. case study (Claude), 2. find leads (/lead-gen, TalkToHumans), 3. start outreach (/outbound-setup, TalkToHumans), 4. have calls (/call-prep, Granola), 5. track every deal (/deal-review, Stripe and PostHog), 6. weekly review (/weekly-review, AI Rob), 7. fix the bottleneck, update the case study, repeat." width="100%"/>
 
 1. **Case study.** The one situation you're trying to serve, written as PULL in `gtm/case-study.md`. It starts as a guess and gets sharper every week.
-2. **Leads.** `/lead-gen` works out how many people you need to contact this week from your funnel, then fills that quota warmest first: signups you haven't had a call with, leads buried in your inbox and follow-ups owed, people engaging with your content, people posting about the situation, then cold.
-3. **Outreach.** `/outbound-setup` imports the list and drafts a short sequence. You review and send every message.
+2. **Leads.** `/lead-gen` works out how many people you need to contact this week from your funnel, then fills that quota warmest first: signups you haven't had a call with, leads buried in your inbox and follow-ups owed, people engaging with your content, people posting about the situation, then cold. You approve the list.
+3. **Outreach.** `/outbound-setup` runs right after you approve the list: it imports it and drafts a short sequence. You review and send every message.
 4. **Calls.** `/call-prep` builds a one-screen call script with AI Rob, updates it live as you paste the transcript, and debriefs.
 5. **Memory.** `/deal-review` keeps one file per person in `deals/`: context, PULL, what they pay and use, a timeline, and AI Rob's dated deal reviews. Every call is also logged in `gtm/sales.md`.
 6. **Review.** `/weekly-review`, every Friday: outreach, calls, deals, activation and revenue go to AI Rob, which scores the week and names the one bottleneck.
@@ -89,8 +89,8 @@ pull-lab/
 
 ### Then, every week
 
-7. **Find leads.** *"Find leads"* (`/lead-gen`).
-8. **Start outreach.** *"Launch outreach for this list"* (`/outbound-setup`). You review and send.
+7. **Find leads.** *"Find and draft leads for next week"* (`/lead-gen`), or say yes when the weekly review offers it. You approve the list.
+8. **Start outreach.** `/outbound-setup` drafts the messages right after, in the same run. You review and send. For a list from somewhere else, say *"Launch outreach for this list"*.
 9. **Have calls, and record them.**
    - **Before:** *"Prep my call with Jane"* (`/call-prep`) gives you a one-screen script.
    - **During:** put your call on the left and the chat on the right. Every few minutes, paste the transcript so far (Granola lets you copy it mid-call), or just say *"update"*. The screen tells you what to say next.
