@@ -4,8 +4,6 @@ How we find people in the case study's situation. The case study itself lives in
 
 ## Six rules
 
-Adapted from Egor Kaleynik's [GTM Refinery](https://www.reddit.com/r/B2BRefinery/).
-
 1. **Start from the case study, not a list.** Write the PULL statement first. Then ask: what would this situation leave behind in public? Those traces are your signals.
 2. **Company first, people last.** Qualify the company (site, job ads, stack, team shape, reviews) before looking up the person.
 3. **Skip the obvious signals, stack the quiet ones.** "Looking for a tool" posts are seen by every vendor. Three weak hints on the same company beat one loud one.
