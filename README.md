@@ -14,13 +14,7 @@ PULL Lab is an AI company OS that runs that loop with you, every week, using Rob
 
 Built with [Rob Snyder](https://robsnyder.org/) and [TalkToHumans](https://www.talktohumans.app/?utm_source=github&utm_medium=readme&utm_campaign=pull-lab).
 
-**Want to see it before you set it up?**
-
-Watch the 3-minute walkthrough:
-
-<a href="https://youtu.be/brofjNE3kTg"><img src="assets/video-thumbnail.jpg" alt="Watch the 3-minute PULL Lab walkthrough on YouTube: Rob Snyder's PULL Framework, Run by Claude Code." width="100%"/></a>
-
-Or read [the sample week](examples/honeypot/reviews/2026-10-17.md): a startup selling to bears, where the review catches a signup spike made of raccoons.
+**Want to see it before you set it up?** Read [the sample week](examples/honeypot/reviews/2026-10-17.md): a startup selling to bears, where the review catches a signup spike made of raccoons.
 
 ## How it works
 
@@ -103,6 +97,10 @@ pull-lab/
    - **After:** *"call's over"*, then *"review this call"* (`/deal-review`). Do the same after every reply or email.
 10. **Next Friday, run the weekly review.** It updates your pipeline, deals and playbook itself, and asks before changing the case study. Iterate on the bottleneck it names.
 11. **Find product-market fit,** after many iterations.
+
+### Watch the 3-minute walkthrough
+
+<a href="https://youtu.be/brofjNE3kTg"><img src="assets/video-thumbnail.jpg" alt="Watch the 3-minute PULL Lab walkthrough on YouTube: Rob Snyder's PULL Framework, Run by Claude Code." width="100%"/></a>
 
 ## Make it yours
 
