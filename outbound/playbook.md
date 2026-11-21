@@ -42,7 +42,7 @@ Signals decide **who** and **when**. The message only earns the call. Don't quot
 1. Day 0: connection request, no note. Your profile is the landing page.
 2. Day after accept: the message.
 3. Two to three days later: a one-word bump.
-4. Stop. On a positive reply, never send the booking link alone: ask for their calendar link, offer a time today, and put yours last ("Awesome, let's do it! Do you have a calendar link I can use? If not, how's later today? Mine if easier: {link}"). No booking after 24 hours: a bump. One more follow-up 48 hours later, then stop.
+4. Stop. On a positive reply, don't answer with your booking link alone: ask whether they have a calendar you can book into, and offer a slot today, with your own link only as a fallback. No booking after a day: a short nudge. Two days later, one last follow-up, then stop.
 
 **Benchmarks per stage:** 30%+ of requests accepted (under 20% is a profile or list problem), 20%+ of accepted connections reply (under 5% is a message problem), 50%+ of replies positive, and most positive replies book a call. Fix only the stage furthest below its benchmark.
 
