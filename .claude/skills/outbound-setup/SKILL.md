@@ -41,6 +41,8 @@ Whatever the tool:
 
 **With the TalkToHumans MCP (recommended):** load its `ground-rules` skill, then `import-and-prep-list` for the import and `write-linkedin-messages` for the drafts, and follow them. Ask before creating the tag. Push the signals with `create_signals`, all of the list in one call, with a stable key per person and signal so a re-run adds nothing. Set the sequence up as a draft and tell the founder where to review and launch it.
 
+TalkToHumans, the review view: sort it so the founder reviews from the top down. Create a number field `Review order` once (`list_field_definitions`, then `create_field_definition` if it's missing) and set it on every contact of the batch with `update_contact`: 1 for the first to review, following lead-gen's hand-back blocks in order (Reply first, Yes not booked, Signups, Stalled and fit, Scored, any test block, then Cold). Within a block, the soonest date that matters comes first, then the highest score, then the most connections. Then create the review view on the batch's contacts (`member.specific_contacts`), sorted by `member.custom_fields.Review order` ascending, with the columns `member.custom_fields.Review order`, `member.full_name`, `member.headline`, `member.notes`, `member.signals` and `member.relationship_status`. Don't sort by an existing score field such as `ICP Score`: follow-ups and cold leads have no score, and it measures profile fit, not who to write first.
+
 **With anything else:** write `outbound/leads/YYYY-MM-DD.csv` with name, link, company, signals, score and the drafted messages, and give the founder the sending order. If the founder uses a CRM, offer to import that CSV with the tag.
 
 ## 4. Record

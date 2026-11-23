@@ -93,7 +93,7 @@ The founder reads this on a screen, fast. Structure over sentences: no paragraph
 1. **Headline**, one line: `Week of {date} · {case study version} · {n} people · expected {m} of {target} meetings · short {gap}`.
 2. **Visual 1 · the quota.** One meter per source (follow-ups, signups, posts, cold): expected meetings against the target, with the rate it used and its sample size. Beside it: connection requests planned against the weekly cap.
 3. **Visual 2 · the waterfall.** One bar per step: looked at, kept, and the main cut reason in 5 words or fewer. Tool costs at the end.
-4. **The people, one card or row each, in blocks with a header:** Reply first · Yes, not booked · Signups · Stalled and fit · Scored · Cold. Each shows:
+4. **The people, one card or row each, in blocks with a header:** Reply first · Yes, not booked · Signups · Stalled and fit · Scored · Cold. This order is the review order: with TalkToHumans, outbound-setup numbers the contacts in it, so the review view lists them the same way. Each shows:
    - name (linked) and company;
    - the score as blocks, not prose: `▲` per need, `⚡` per urgency, `♨` warm, then the number (`▲▲▲ · 6`, `▲ ⚡ · 5`);
    - why, in 8 words or fewer;
