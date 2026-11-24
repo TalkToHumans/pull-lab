@@ -1,6 +1,6 @@
 ---
 name: weekly-review
-description: Run the weekly PULL review. Use when the founder asks to run, draft or update the weekly review, the Friday review, their scorecard, or "what should I focus on next week". Pulls the week's outreach, calls, deals, activation and revenue from whatever tools are connected, runs the evidence through AI Rob against its six standards, and writes reviews/YYYY-MM-DD.md with a scorecard, what the data says, one bottleneck and the move. Shows four visuals in chat (where you are, scorecard, why it's the bottleneck, week over week). Applies the pipeline rows, deal reviews and playbook changes itself, and asks only before changing the case study. Sets AI Rob's memory up on the first run. Also runs as a demo on examples/honeypot.
+description: Run the weekly PULL review. Use when the founder asks to run, draft or update the weekly review, the Friday review, their scorecard, or "what should I focus on next week". First runs deal-review's weekly sweep: the week's messages, calls, signups and billing changes, filtered to what's worth a deal, update or create the deals. Then pulls the week's outreach, calls, deals, activation and revenue from whatever tools are connected, runs the evidence through AI Rob against its six standards, and writes reviews/YYYY-MM-DD.md with a scorecard, what the data says, one bottleneck and the move. Shows four visuals in chat (where you are, scorecard, why it's the bottleneck, week over week). Applies the pipeline rows, deal reviews and playbook changes itself, and asks only before changing the case study. Sets AI Rob's memory up on the first run. Also runs as a demo on examples/honeypot.
 ---
 
 # Weekly review
@@ -22,27 +22,33 @@ When `gtm/case-study.md` doesn't exist yet:
 3. After step 3, list the past calls and live conversations with no entry in `gtm/sales.md`, and offer to run [deal-review](../deal-review/SKILL.md) on them, starting with paying customers.
 4. In step 5, ask AI Rob to draft the first version of the case study from that evidence. Write it into `gtm/case-study.md` only after the founder agrees with it, with the broken-out PULL as the table described in [gtm/README.md](../../../gtm/README.md).
 
-## 1. Window and file
+## 1. Window, file and deal sync
 
 - Window: the 7 days ending today, unless the founder gives dates.
 - File: `reviews/YYYY-MM-DD.md` with the last day of the window. If it exists, update it.
+
+### Deal sync (before anything else)
+
+The review is the weekly checkpoint for `deals/`: whoever did something worth learning from this week has a current deal before the review reads them. Run [deal-review's weekly sweep](../deal-review/SKILL.md#weekly-sweep) for the window. It collects the week's messages, calls, signups and billing changes, keeps only what clears [its bar](../deal-review/SKILL.md#whats-worth-a-deal), and updates or creates those deals. Deals are records: don't ask before it writes them (in demo mode, list what it would do instead). Its unsure matches go to step 4.
+
+Keep its report (created, updated, below the bar, unsure) for "Deals that moved" and "Changes", and reuse its pulls in step 3. Deals with no signal this week aren't reopened: the stalled ones are listed in step 3.
 
 ## 2. Read first
 
 - `context/company.md` (the goal, contract size, the tools connected), `context/founders.md`, `context/product.md` (activation definition, event names)
 - `gtm/case-study.md` (current version and changelog), `gtm/pipeline.md`, `gtm/sales.md` (rollup and recent entries), `gtm/post-sales.md`
-- Every `deals/*/deal.md`: frontmatter, PULL read, account, and the latest review
+- Every `deals/*/deal.md`, as the deal sync left them: frontmatter, PULL read, account, and the latest review
 - The latest file in `reviews/`, especially its bottleneck and move: this review checks whether last week's plan happened and what it showed.
 
 ## 3. Pull the week
 
 Use each tool listed as connected in `context/company.md`. A tool that isn't connected, or fails, is not a zero: write "not connected" or the error in that section's source line and ask the founder for the number in step 4.
 
-Read-only everywhere. This skill never sends, imports, edits or deletes anything in a tool.
+Read-only everywhere. This skill never sends, imports, edits or deletes anything in a tool. Reuse what the deal sync already pulled rather than calling the same tool twice.
 
 - **Outreach.** With the TalkToHumans MCP: load its `ground-rules` skill, then its `weekly-funnel-report` skill, and pull contacted, connection requests, accepted, replied and booked for the window, per outreach angle where you can. Name who replied and who booked. Without it: ask.
-- **Calls.** With a call recorder MCP (Granola, Fathom...): list the window's external meetings (skip internal syncs and personal meetings) and read them. Check each one has an entry in `gtm/sales.md`; list the ones that don't.
-- **Deals.** `git log --since=<start> --name-status -- deals/ gtm/` plus uncommitted changes. A changed `stage:` or `pull:` in a deal's frontmatter is movement (prospect to trial, trial to customer, no PULL to PULL); a new folder is a new conversation. Also list the stalled deals: no new timeline line in 14+ days and no next meeting booked, positive replies that never booked, trials that ended with no card. Note which ones fit the current case study.
+- **Calls.** With a call recorder MCP (Granola, Fathom...): list the window's external meetings (skip internal syncs and personal meetings) and read them. The deal sync logged them in `gtm/sales.md`; list any it left out and why.
+- **Deals.** `git log --since=<start> --name-status -- deals/ gtm/` plus uncommitted changes, which include the deal sync's. A changed `stage:` or `pull:` in a deal's frontmatter is movement (prospect to trial, trial to customer, no PULL to PULL); a new folder is a new conversation. Also list the stalled deals: no new timeline line in 14+ days and no next meeting booked, positive replies that never booked, trials that ended with no card. Note which ones fit the current case study.
 - **Activation.** With PostHog or Mixpanel: signups in the window, how many reached the activation event from `context/product.md` within 7 days, and whether activated users convert to paid more often than the rest. Where most signups came from, if the tool knows.
 - **Revenue.** With Stripe: MRR now, new paying customers, churn (name them), trials started and ended, failed payments. Keep comps, one-offs and trials out of MRR.
 
@@ -51,7 +57,7 @@ Read-only everywhere. This skill never sends, imports, edits or deletes anything
 Ask once, grouped, only what the tools couldn't show:
 
 1. The main question or tension this week, and how you feel about it.
-2. Confirm the call list (add DMs, emails or calls the tools missed; flag any to leave out).
+2. Confirm the call list (add DMs, emails or calls the tools missed; flag any to leave out), and the deal matches the sync was unsure of. Run deal-review on what the answers add.
 3. Numbers you track by hand.
 4. Did last week's move happen? If not, why not.
 5. Anything else worth remembering.
@@ -99,6 +105,8 @@ Sources: [tools used] · Not connected: [tools] · AI Rob
 
 **Churned:** [names, or "none"]
 
+**Deal sync:** [n] updated, [n] created ([names, linked]), [n] unsure (asked). Below the bar, no deal: [names or workspaces with the reason, or "none"].
+
 **Stalled and fit [version]:** [n: names, linked to their deals, or "none"]. `/lead-gen` lists them first, with their last words.
 
 ## Did they pull?
@@ -140,7 +148,7 @@ Checked against the current case study ([version]: [one-line who]).
 
 **Applied:**
 - `gtm/pipeline.md`: [this week's rows, angles kept or retired]
-- `deals/...`: [deals reviewed, follow-ups due]
+- `deals/...`: [deals created and updated by the sync, deals reviewed after step 5, follow-ups due]
 - `outbound/playbook.md`: [recipes added or dropped]
 
 **Needs your yes:**
@@ -161,7 +169,7 @@ Rules:
 These are records of what happened, dated and added on top, so apply them without asking (skip in demo mode):
 
 - `gtm/pipeline.md`: add the week's rows on top of its tables. Never edit old rows. Fill the result of each angle, and mark the ones to keep or retire.
-- Deals: run [deal-review](../deal-review/SKILL.md) on the deals AI Rob named, and on the calls with no `gtm/sales.md` entry.
+- Deals: the deal sync (step 1) already updated every deal with a signal. Run [deal-review](../deal-review/SKILL.md) only on the deals AI Rob named in step 5 that the sync didn't cover, and on what the intake added.
 - `outbound/playbook.md`: add or drop the recipes AI Rob named, with today's date.
 
 **Never apply the case study.** It's the PULL hypothesis every other skill targets from, and the founder has context AI Rob doesn't. It waits for a yes (AGENTS.md rule 5).
@@ -177,7 +185,7 @@ The chat reply is short: the founder reads it, the file holds the detail.
    3. **Why it's the bottleneck:** the comparison AI Rob gave in step 5. This one changes every week; pick the form that fits it (one tile per meeting, a meter against a cap, two bars side by side).
    4. **Did last week's move work?** The failing standard week over week, with its bar as a dashed line.
 3. **The bottleneck** and **today, in one hour**, two lines.
-4. **What was applied** (one line: pipeline rows, deals, playbook) and **what was missing** (tools not connected).
+4. **What was applied** (one line: deals synced, created and updated, pipeline rows, playbook) and **what was missing** (tools not connected).
 5. **One question:** apply the case study change? Show the new PULL sentence.
 6. **Then the next batch.** If the move needs new people to contact, or deals are stalled and fit, offer to run [lead-gen](../lead-gen/SKILL.md) for next week: one yes takes it through to the approved list and the drafted outreach. Ask it after the case study answer, or as the only question when there's no case study change. Otherwise end without a question.
 
@@ -191,4 +199,4 @@ On a yes to the case study: replace the current version in `gtm/case-study.md` a
 
 ## Unattended mode
 
-For a scheduled run with nobody to answer: skip step 4, write inferred items with a `**TO CONFIRM:**` prefix, and add a final `## Open questions` section with the intake questions that still matter and what the tools showed. Apply the records (step 7) as usual. Leave the case study change under "Needs your yes" for the founder's next session.
+For a scheduled run with nobody to answer: skip step 4, run the deal sync as usual but leave unsure matches as open questions, write inferred items with a `**TO CONFIRM:**` prefix, and add a final `## Open questions` section with the intake questions that still matter and what the tools showed. Apply the records (step 7) as usual. Leave the case study change under "Needs your yes" for the founder's next session.

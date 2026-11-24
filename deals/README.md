@@ -1,6 +1,6 @@
 # Deals
 
-One folder per person or account you've had a real conversation with: from their first reply through after they've paid, and also the ones who turned out to have no demand, peers and partners. Created and updated by [deal-review](../.claude/skills/deal-review/SKILL.md).
+One folder per person or account we can learn about PULL from: a call, a conversation with enough detail about a yes, a meh or a no, or an inbound user who pays and uses the product a lot (the bar is in [deal-review](../.claude/skills/deal-review/SKILL.md#whats-worth-a-deal)). It covers them from that first signal through after they've paid, and also the ones who turned out to have no demand, peers and partners. Created and updated by [deal-review](../.claude/skills/deal-review/SKILL.md).
 
 ```
 deals/
