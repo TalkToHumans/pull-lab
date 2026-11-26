@@ -82,7 +82,7 @@ The founder reads this in quick glances while listening. They need visual anchor
 ```markdown
 ## 🪪 Who you're calling                         ← Prep only
 
-- {Name}, {role} at {company}
+- [{Name}]({link}), {role} at {company}   ← the name is a link, see Format rules
 - {what the company does, one line}
 - {one signal that matters: audience, tools, what they pay and use if they're already in}
 - {how the conversation started}
@@ -163,4 +163,5 @@ Format rules:
 - **🚪 No PULL?** is its own section on every screen, so the exit is visible at every point of the call.
 - **💡 Tip** is the last section, one line that coaches the founder: the move they just made or skipped, or the trap to avoid next. It replaces any reasoning paragraph.
 - **Prep:** the Who section has at most 5 bullets, taken from the deal's context. Mark prefilled PULL slots `📁 confirm`.
+- **The name is a link** to where the founder can open the person in one click, the first that exists: with the TalkToHumans MCP, the TalkToHumans conversation (`app_url` from `list_conversations`, or the contact's `app_url` when there's no conversation yet); otherwise their LinkedIn profile URL; otherwise the link to wherever the conversation happened (an email thread, a CRM record). With no link from any source, write the name as plain text. Never guess a URL.
 - No paragraphs, and no dashes in anything the founder will read aloud.
