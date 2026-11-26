@@ -6,7 +6,7 @@ They're created from AI Rob's own templates the first time you run `/weekly-revi
 
 | File | What it holds | Updated by |
 |---|---|---|
-| `case-study.md` | The one situation you're trying to serve, written as PULL, with every past version in a dated changelog | weekly-review (proposed, you approve) |
+| `case-study.md` | The one situation you're trying to serve, written as PULL, with every past version in a dated changelog | deal-review after every touch, weekly-review every week, both without asking (a dated changelog entry each time) |
 | `pipeline.md` | First meetings per week, and the numbers per channel and per outreach angle | weekly-review, outbound-setup |
 | `sales.md` | One row per sales call: did they pull, their words, fit, next step, outcome. Feeds the Pull, Close rate and Cycle time standards | deal-review (after call-prep) |
 | `sales-process.md` | Your call scripts and sales steps | call-prep, on request |

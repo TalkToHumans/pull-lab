@@ -1,14 +1,15 @@
 ---
 name: deal-review
-description: Keep one file per person you're selling to, current after every touch. After a call, reply, email or "no", updates deals/<person-company>/deal.md (context, latest PULL read, billing and usage, timeline, and for live opportunities a dated AI Rob deal review on top) and logs calls in gtm/sales.md. Use for "review this call", "log this call", "where is the deal with X", "what do I do with X", "add X to deals", after a call-prep debrief, or "update the deals for this week". Also runs as the weekly sweep the weekly review starts with: the week's messages, calls, signups and billing changes, filtered to what's worth a deal.
+description: Keep one file per person you're selling to, current after every touch. After a call, reply, email or "no", updates deals/<person-company>/deal.md (context, latest PULL read, billing and usage, timeline, and for live opportunities a dated AI Rob deal review on top), logs calls in gtm/sales.md, and updates gtm/case-study.md with the new evidence without asking. Use for "review this call", "log this call", "where is the deal with X", "what do I do with X", "add X to deals", after a call-prep debrief, or "update the deals for this week". Also runs as the weekly sweep the weekly review starts with: the week's messages, calls, signups and billing changes, filtered to what's worth a deal.
 ---
 
 # Deal review
 
-Every time something happens with someone you're selling to (a reply, a call, an email, a "no", silence), run this. It keeps two files current:
+Every time something happens with someone you're selling to (a reply, a call, an email, a "no", silence), run this. It keeps three files current:
 
 - [deals/](../../../deals/README.md)`<person-company>/deal.md`: everything about this person, so the next conversation starts from context. The format is in [deals/README.md](../../../deals/README.md).
 - [gtm/sales.md](../../../gtm/README.md): one row per sales call. It feeds the weekly scorecard.
+- [gtm/case-study.md](../../../gtm/README.md): the current PULL hypothesis, updated with each new piece of evidence so every other skill targets from the latest data.
 
 AI Rob owns every judgment here: whether the buyer pulled, P, U, L+L, fit with the case study, the deal stage, the next steps (see [Loading AI Rob](../../../AGENTS.md#loading-ai-rob)). This skill gathers the evidence, adds the context and account facts, and writes the files. If AI Rob is unavailable, stop and say so.
 
@@ -47,9 +48,19 @@ Follow the structure in [deals/README.md](../../../deals/README.md):
 
 Add the call as a new row on top of the Calls table (columns in [gtm/README.md](../../../gtm/README.md)), linked to the deal file, and update the rollup lines. P, U and L+L go in the deal file, not here. Fill the outcome of earlier rows when you learn it.
 
-## 5. Report
+## 5. Update `gtm/case-study.md` (every run, without asking)
 
-In a few lines: did they pull (with the quote), what moved since the last touch, the next step, and whether this evidence supports or contradicts the current case study. If it contradicts it, propose the change to `gtm/case-study.md`; don't make it.
+The case study must always reflect the latest deals. After writing the deal file, apply what this evidence changes yourself; don't propose it and don't wait for a yes.
+
+- **Evidence:** who has bought in this situation, the buyer quotes under P, U and L+L (a new option or limitation goes in the L+L list and, if it's a real gap, in the PULL sentence), the proof, what would kill it, and any drift in the Who (a buyer who doesn't match it).
+- **Verdicts the file already set:** when a version's own graduation or kill line is met, apply it: mark the status, and promote or retire the version as that line says.
+- **Changelog:** add one dated entry on top ("Evidence update (deal-review)" or the verdict), saying what changed and which deal it came from. Never delete an old version or entry.
+- **Nothing changes:** if the evidence only confirms what's written, leave the file alone and say so in the report.
+- Writing a new hypothesis from scratch is the weekly review's job: here, update the versions that exist.
+
+## 6. Report
+
+In a few lines: did they pull (with the quote), what moved since the last touch, the next step, and what you changed in the case study (step 5).
 
 If nothing moved since the last review, say so: a deal that doesn't move between two reviews is itself the finding.
 
@@ -71,7 +82,7 @@ Run by the [weekly review](../weekly-review/SKILL.md) as its first step, or when
 1. **Collect the window's signals** from each connected tool: conversations where the other side wrote (TalkToHumans), external calls (call recorder), new signups and their usage (PostHog or Mixpanel), and billing changes: trials started or ended, new payers, upgrades, downgrades, cancellations, failed payments (Stripe). Also compare the `stage:` of every deal that has a billing id with its subscription today: a drift is a signal.
 2. **Match** each signal to a deal by name, email, company, thread link and billing or analytics ids. One person or workspace, one deal; several signals for one person are one update.
 3. **Filter** with [What's worth a deal](#whats-worth-a-deal): existing deals take every signal; new people only above the bar.
-4. **Run steps 1 to 4** on each deal that's left, as one batch: load AI Rob once and give it the whole batch. A match you're unsure of waits for one grouped question (or a `TO CONFIRM` line when nobody's there to answer).
+4. **Run steps 1 to 5** on each deal that's left, as one batch: load AI Rob once and give it the whole batch, and update the case study once for the batch. A match you're unsure of waits for one grouped question (or a `TO CONFIRM` line when nobody's there to answer).
 5. **Report** in four lists, each name linked, with the signal behind it: created, updated, below the bar (and why), unsure. The weekly review copies them as they are.
 
 ## Rules

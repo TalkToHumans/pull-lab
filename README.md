@@ -95,7 +95,7 @@ pull-lab/
    - **Before:** *"Prep my call with Jane"* (`/call-prep`) gives you a one-screen script.
    - **During:** put your call on the left and the chat on the right. Every few minutes, paste the transcript so far (Granola lets you copy it mid-call), or just say *"update"*. The screen tells you what to say next.
    - **After:** *"call's over"*, then *"review this call"* (`/deal-review`). Do the same after every reply or email.
-10. **Next Friday, run the weekly review.** It updates your pipeline, deals and playbook itself, and asks before changing the case study. Iterate on the bottleneck it names.
+10. **Next Friday, run the weekly review.** It updates your pipeline, deals, playbook and case study itself, with a dated changelog entry for each case study change. Iterate on the bottleneck it names.
 11. **Find product-market fit,** after many iterations.
 
 ### Watch the 3-minute walkthrough

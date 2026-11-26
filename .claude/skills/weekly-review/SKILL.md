@@ -1,6 +1,6 @@
 ---
 name: weekly-review
-description: Run the weekly PULL review. Use when the founder asks to run, draft or update the weekly review, the Friday review, their scorecard, or "what should I focus on next week". First runs deal-review's weekly sweep: the week's messages, calls, signups and billing changes, filtered to what's worth a deal, update or create the deals. Then pulls the week's outreach, calls, deals, activation and revenue from whatever tools are connected, runs the evidence through AI Rob against its six standards, and writes reviews/YYYY-MM-DD.md with a scorecard, what the data says, one bottleneck and the move. Shows four visuals in chat (where you are, scorecard, why it's the bottleneck, week over week). Applies the pipeline rows, deal reviews and playbook changes itself, cleans up TalkToHumans to match (status tags like customer, churned, trial and lead, dated notes and signals), and asks only before changing the case study. Sets AI Rob's memory up on the first run. Also runs as a demo on examples/honeypot.
+description: Run the weekly PULL review. Use when the founder asks to run, draft or update the weekly review, the Friday review, their scorecard, or "what should I focus on next week". First runs deal-review's weekly sweep: the week's messages, calls, signups and billing changes, filtered to what's worth a deal, update or create the deals. Then pulls the week's outreach, calls, deals, activation and revenue from whatever tools are connected, runs the evidence through AI Rob against its six standards, and writes reviews/YYYY-MM-DD.md with a scorecard, what the data says, one bottleneck and the move. Shows four visuals in chat (where you are, scorecard, why it's the bottleneck, week over week). Applies the pipeline rows, deal reviews and playbook changes itself, cleans up TalkToHumans to match (status tags like customer, churned, trial and lead, dated notes and signals), and updates the case study itself, without asking. Sets AI Rob's memory up on the first run. Also runs as a demo on examples/honeypot.
 ---
 
 # Weekly review
@@ -20,7 +20,7 @@ When `gtm/case-study.md` doesn't exist yet:
 1. Load AI Rob and follow its setup for founder memory: create `gtm/case-study.md`, `gtm/pipeline.md`, `gtm/sales.md`, `gtm/sales-process.md` and `gtm/post-sales.md` from its own templates, in the table layouts described in [gtm/README.md](../../../gtm/README.md), and use `deals/` for deal folders. The templates ship with AI Rob; never copy them into this repo's public files.
 2. Widen the window to the last 90 days, so the review starts from everything the tools already know.
 3. After step 3, list the past calls and live conversations with no entry in `gtm/sales.md`, and offer to run [deal-review](../deal-review/SKILL.md) on them, starting with paying customers.
-4. In step 5, ask AI Rob to draft the first version of the case study from that evidence. Write it into `gtm/case-study.md` only after the founder agrees with it, with the broken-out PULL as the table described in [gtm/README.md](../../../gtm/README.md).
+4. In step 5, ask AI Rob to draft the first version of the case study from that evidence. Write it into `gtm/case-study.md` right away, and show it so the founder can correct it, with the broken-out PULL as the table described in [gtm/README.md](../../../gtm/README.md).
 
 ## 1. Window, file and deal sync
 
@@ -147,13 +147,13 @@ Checked against the current case study ([version]: [one-line who]).
 ## Changes
 
 **Applied:**
+- `gtm/case-study.md`: [what changed and why: new evidence, a verdict its own criteria set, or a new version with its PULL sentence quoted in full; or "unchanged"]
 - `gtm/pipeline.md`: [this week's rows, angles kept or retired]
 - `deals/...`: [deals created and updated by the sync, deals reviewed after step 5, follow-ups due]
 - TalkToHumans: [contacts retagged, from → to, linked to their deals; notes and signals added; contacts left alone and why]
 - `outbound/playbook.md`: [recipes added or dropped]
 
 **Needs your yes:**
-- `gtm/case-study.md`: [the new version's PULL sentence, quoted in full, and the evidence behind it]
 - TalkToHumans: [a new tag or custom field, or a tag to rename, merge or delete, and why]
 ```
 
@@ -175,7 +175,7 @@ These are records of what happened, dated and added on top, so apply them withou
 - `outbound/playbook.md`: add or drop the recipes AI Rob named, with today's date.
 - With the TalkToHumans MCP: run [the CRM cleanup](#crm-cleanup-with-the-talktohumans-mcp), after the deals are current.
 
-**Never apply the case study.** It's the PULL hypothesis every other skill targets from, and the founder has context AI Rob doesn't. It waits for a yes (AGENTS.md rule 5).
+**Apply the case study change too, without asking.** It's the PULL hypothesis every other skill targets from, so it has to match this week's evidence before lead-gen runs on it. Apply AI Rob's step 5 change: replace the current version, add a dated changelog entry on top saying what changed and why, and never delete an old version. Report it under "Changes". If the founder disagrees, the changelog shows what to revert.
 
 ### CRM cleanup (with the TalkToHumans MCP)
 
@@ -203,8 +203,8 @@ The chat reply is short: the founder reads it, the file holds the detail.
    4. **Did last week's move work?** The failing standard week over week, with its bar as a dashed line.
 3. **The bottleneck** and **today, in one hour**, two lines.
 4. **What was applied** (one line: deals synced, created and updated, contacts retagged in TalkToHumans, pipeline rows, playbook) and **what was missing** (tools not connected).
-5. **One question:** apply the case study change? Show the new PULL sentence.
-6. **Then the next batch.** If the move needs new people to contact, or deals are stalled and fit, offer to run [lead-gen](../lead-gen/SKILL.md) for next week: one yes takes it through to the approved list and the drafted outreach. Ask it after the case study answer, or as the only question when there's no case study change. Otherwise end without a question.
+5. **The case study:** one line on what changed, with the new PULL sentence if the version changed. No question.
+6. **Then the next batch.** If the move needs new people to contact, or deals are stalled and fit, offer to run [lead-gen](../lead-gen/SKILL.md) for next week: one yes takes it through to the approved list and the drafted outreach. Ask it as the only question. Otherwise end without a question.
 
 How to show the visuals:
 
@@ -212,8 +212,8 @@ How to show the visuals:
 - **Otherwise** (a terminal, Codex, Cursor), show the same four blocks with the text bars from the review file, in a code block so they line up.
 - Nothing else gets a chart. Outreach angles, activation and revenue stay as text in the file: the bottleneck outranks them.
 
-On a yes to the case study: replace the current version in `gtm/case-study.md` and add a dated entry on top of the changelog saying what changed and why. Never delete an old version. Write the broken-out PULL as the table described in [gtm/README.md](../../../gtm/README.md).
+For the case study (step 7): replace the current version in `gtm/case-study.md` and add a dated entry on top of the changelog saying what changed and why. Never delete an old version. Write the broken-out PULL as the table described in [gtm/README.md](../../../gtm/README.md).
 
 ## Unattended mode
 
-For a scheduled run with nobody to answer: skip step 4, run the deal sync as usual but leave unsure matches as open questions, write inferred items with a `**TO CONFIRM:**` prefix, and add a final `## Open questions` section with the intake questions that still matter and what the tools showed. Apply the records (step 7) as usual. Leave the case study change under "Needs your yes" for the founder's next session.
+For a scheduled run with nobody to answer: skip step 4, run the deal sync as usual but leave unsure matches as open questions, write inferred items with a `**TO CONFIRM:**` prefix, and add a final `## Open questions` section with the intake questions that still matter and what the tools showed. Apply the records (step 7) as usual. Apply the case study change as usual.
