@@ -1,6 +1,6 @@
 ---
 name: weekly-review
-description: Run the weekly PULL review. Use when the founder asks to run, draft or update the weekly review, the Friday review, their scorecard, or "what should I focus on next week". First runs deal-review's weekly sweep: the week's messages, calls, signups and billing changes, filtered to what's worth a deal, update or create the deals. Then pulls the week's outreach, calls, deals, activation and revenue from whatever tools are connected, runs the evidence through AI Rob against its six standards, and writes reviews/YYYY-MM-DD.md with a scorecard, what the data says, one bottleneck and the move. Shows four visuals in chat (where you are, scorecard, why it's the bottleneck, week over week). Applies the pipeline rows, deal reviews and playbook changes itself, and asks only before changing the case study. Sets AI Rob's memory up on the first run. Also runs as a demo on examples/honeypot.
+description: Run the weekly PULL review. Use when the founder asks to run, draft or update the weekly review, the Friday review, their scorecard, or "what should I focus on next week". First runs deal-review's weekly sweep: the week's messages, calls, signups and billing changes, filtered to what's worth a deal, update or create the deals. Then pulls the week's outreach, calls, deals, activation and revenue from whatever tools are connected, runs the evidence through AI Rob against its six standards, and writes reviews/YYYY-MM-DD.md with a scorecard, what the data says, one bottleneck and the move. Shows four visuals in chat (where you are, scorecard, why it's the bottleneck, week over week). Applies the pipeline rows, deal reviews and playbook changes itself, cleans up TalkToHumans to match (status tags like customer, churned, trial and lead, dated notes and signals), and asks only before changing the case study. Sets AI Rob's memory up on the first run. Also runs as a demo on examples/honeypot.
 ---
 
 # Weekly review
@@ -44,7 +44,7 @@ Keep its report (created, updated, below the bar, unsure) for "Deals that moved"
 
 Use each tool listed as connected in `context/company.md`. A tool that isn't connected, or fails, is not a zero: write "not connected" or the error in that section's source line and ask the founder for the number in step 4.
 
-Read-only everywhere. This skill never sends, imports, edits or deletes anything in a tool. Reuse what the deal sync already pulled rather than calling the same tool twice.
+Read-only here. The only writes to a tool are the [CRM cleanup](#crm-cleanup-with-the-talktohumans-mcp) in step 7: tags, notes, signals and custom fields in TalkToHumans. The skill never sends, imports or deletes anything. Reuse what the deal sync already pulled rather than calling the same tool twice.
 
 - **Outreach.** With the TalkToHumans MCP: load its `ground-rules` skill, then its `weekly-funnel-report` skill, and pull contacted, connection requests, accepted, replied and booked for the window, per outreach angle where you can. Name who replied and who booked. Without it: ask.
 - **Calls.** With a call recorder MCP (Granola, Fathom...): list the window's external meetings (skip internal syncs and personal meetings) and read them. The deal sync logged them in `gtm/sales.md`; list any it left out and why.
@@ -149,10 +149,12 @@ Checked against the current case study ([version]: [one-line who]).
 **Applied:**
 - `gtm/pipeline.md`: [this week's rows, angles kept or retired]
 - `deals/...`: [deals created and updated by the sync, deals reviewed after step 5, follow-ups due]
+- TalkToHumans: [contacts retagged, from → to, linked to their deals; notes and signals added; contacts left alone and why]
 - `outbound/playbook.md`: [recipes added or dropped]
 
 **Needs your yes:**
 - `gtm/case-study.md`: [the new version's PULL sentence, quoted in full, and the evidence behind it]
+- TalkToHumans: [a new tag or custom field, or a tag to rename, merge or delete, and why]
 ```
 
 Rules:
@@ -171,8 +173,23 @@ These are records of what happened, dated and added on top, so apply them withou
 - `gtm/pipeline.md`: add the week's rows on top of its tables. Never edit old rows. Fill the result of each angle, and mark the ones to keep or retire.
 - Deals: the deal sync (step 1) already updated every deal with a signal. Run [deal-review](../deal-review/SKILL.md) only on the deals AI Rob named in step 5 that the sync didn't cover, and on what the intake added.
 - `outbound/playbook.md`: add or drop the recipes AI Rob named, with today's date.
+- With the TalkToHumans MCP: run [the CRM cleanup](#crm-cleanup-with-the-talktohumans-mcp), after the deals are current.
 
 **Never apply the case study.** It's the PULL hypothesis every other skill targets from, and the founder has context AI Rob doesn't. It waits for a yes (AGENTS.md rule 5).
+
+### CRM cleanup (with the TalkToHumans MCP)
+
+The deals, Stripe and this week's threads now say where each person stands. Make the CRM say the same, so the inboxes, the filters and next week's lead-gen start from the truth. Without the TalkToHumans MCP, skip it and say so under "Changes".
+
+1. **Load** its `ground-rules` and `organize-inbox` skills, then `list_tags` and `list_field_definitions`. Reuse what exists, with its exact names.
+2. **Who.** Every deal the sync created or updated, every deal whose `stage:` changed this week, the new, back, churned and trial changes from Stripe (step 3), and the people who replied or booked in the window. On the first run, every deal in `deals/`. Find each contact by LinkedIn URL (`list_contacts` with `member.linkedin_url`), else by name and company. Leave unsure matches alone and list them.
+3. **One status tag per contact,** read from the deal and the billing, not from the mood of the last message: customer (pays now), churned (paid, then stopped), trial, booked or call held, replied or qualified lead, lost or not a fit. Map each to the founder's existing tag, whatever it's called. In the same `update_contact` call, add the new status tag and remove the status tags it replaces (a new customer loses Trial and Booked). Leave every other tag alone: case study version tags, Friend, Affiliate, campaign tags.
+4. **A note when the status changes:** one dated line saying why and where it comes from ("2026-11-25: paying, Pro $45/mo, after the Nov 24 call"). Nothing the tag already says. The same note is never added twice.
+5. **Signals for the week's dated events** (became customer, churned, trial started, call held), with `create_signals`: `custom:<event>` types, all in one call, keyed `<event>:<contact_id>:<date>` so a re-run adds nothing. They let lead-gen and the inboxes find "churned in the last 90 days" or "trial, no call".
+6. **Custom fields:** fill existing ones for facts that change (plan, MRR, customer since). Propose a missing one, never create it.
+7. **What waits for a yes,** under "Needs your yes": a new tag (each tag gets its own inbox for the whole workspace), a new custom field, renaming, merging or deleting a tag. Apply them in step 8 on a yes. More than 20 contacts in one run (the first run's backfill): do the first 20, show them, continue on a yes. Never send, draft, delete a contact or touch a sequence.
+
+Report it under "Changes": contacts retagged (from → to, linked to their deals), notes and signals added, contacts left alone and why. In demo mode, list what it would do instead. In unattended mode, apply what reuses existing tags and fields, and leave the rest for the open questions.
 
 ## 8. Finish in chat
 
@@ -185,7 +202,7 @@ The chat reply is short: the founder reads it, the file holds the detail.
    3. **Why it's the bottleneck:** the comparison AI Rob gave in step 5. This one changes every week; pick the form that fits it (one tile per meeting, a meter against a cap, two bars side by side).
    4. **Did last week's move work?** The failing standard week over week, with its bar as a dashed line.
 3. **The bottleneck** and **today, in one hour**, two lines.
-4. **What was applied** (one line: deals synced, created and updated, pipeline rows, playbook) and **what was missing** (tools not connected).
+4. **What was applied** (one line: deals synced, created and updated, contacts retagged in TalkToHumans, pipeline rows, playbook) and **what was missing** (tools not connected).
 5. **One question:** apply the case study change? Show the new PULL sentence.
 6. **Then the next batch.** If the move needs new people to contact, or deals are stalled and fit, offer to run [lead-gen](../lead-gen/SKILL.md) for next week: one yes takes it through to the approved list and the drafted outreach. Ask it after the case study answer, or as the only question when there's no case study change. Otherwise end without a question.
 
