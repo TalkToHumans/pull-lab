@@ -113,3 +113,7 @@ Every skill is a plain markdown file in `.claude/skills/`: edit it yourself, or 
 - **Only a purchase proves the case study.** On a call, a buyer pulls when they start the next step themselves, like asking the price. A trial you offered, signups and compliments don't count. This is the core of the method, so keep it.
 - **AI Rob makes every PULL judgment.** The skills gather and file the evidence, AI Rob scores it. Without it, they stop instead of guessing.
 - **Folder and file names.** `deals/`, `gtm/`, `reviews/` and the rest are just names. If you prefer different terms, ask your agent to rename them and update every link and skill that points to them.
+
+## License
+
+MIT, see [LICENSE](LICENSE). [AI Rob](https://airobsnyder.com) is Rob Snyder's, delivered through the Skillfully MCP, and isn't part of this repo or its license.
