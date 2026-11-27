@@ -18,18 +18,21 @@ When the founder asks for a demo, or names `examples/honeypot`: treat `examples/
 When `gtm/case-study.md` doesn't exist yet:
 
 1. Load AI Rob and follow its setup for founder memory: create `gtm/case-study.md`, `gtm/pipeline.md`, `gtm/sales.md`, `gtm/sales-process.md` and `gtm/post-sales.md` from its own templates, in the table layouts described in [gtm/README.md](../../../gtm/README.md), and use `deals/` for deal folders. The templates ship with AI Rob; never copy them into this repo's public files.
-2. Widen the window to the last 90 days, so the review starts from everything the tools already know.
+2. Widen the catch-up to the last 90 days, so the review starts from everything the tools already know.
 3. After step 3, list the past calls and live conversations with no entry in `gtm/sales.md`, and offer to run [deal-review](../deal-review/SKILL.md) on them, starting with paying customers.
 4. In step 5, ask AI Rob to draft the first version of the case study from that evidence. Write it into `gtm/case-study.md` right away, and show it so the founder can correct it, with the broken-out PULL as the table described in [gtm/README.md](../../../gtm/README.md).
 
 ## 1. Window, file and deal sync
 
-- Window: the 7 days ending today, unless the founder gives dates.
-- File: `reviews/YYYY-MM-DD.md` with the last day of the window. If it exists, update it.
+Two spans: the week keeps the scorecard comparable from one review to the next, and the catch-up makes sure nothing that happened between two reviews is missed.
+
+- **Week:** the 7 days ending today, unless the founder gives dates. The scorecard, its bars and the week-over-week series read the week only.
+- **Catch-up:** from the day after the previous review's last day (the latest file in `reviews/`) to the week's last day. The deal sync, the calls, deal movement and billing changes read the whole catch-up. It equals the week when reviews follow each other, and runs longer after a skipped review or one run before its week was over. With no previous review, it's the week (first run: 90 days). When it's longer than the week, say which days fall before the week and which weeks had no review: AI Rob's debug in step 5 covers them.
+- File: `reviews/YYYY-MM-DD.md` with the last day of the week. If it exists, update it.
 
 ### Deal sync (before anything else)
 
-The review is the weekly checkpoint for `deals/`: whoever did something worth learning from this week has a current deal before the review reads them. Run [deal-review's weekly sweep](../deal-review/SKILL.md#weekly-sweep) for the window. It collects the week's messages, calls, signups and billing changes, keeps only what clears [its bar](../deal-review/SKILL.md#whats-worth-a-deal), and updates or creates those deals. Deals are records: don't ask before it writes them (in demo mode, list what it would do instead). Its unsure matches go to step 4.
+The review is the weekly checkpoint for `deals/`: whoever did something worth learning from since the last review has a current deal before the review reads them. Run [deal-review's weekly sweep](../deal-review/SKILL.md#weekly-sweep) for the catch-up. It collects the catch-up's messages, calls, signups and billing changes, keeps only what clears [its bar](../deal-review/SKILL.md#whats-worth-a-deal), and updates or creates those deals. Deals are records: don't ask before it writes them (in demo mode, list what it would do instead). Its unsure matches go to step 4.
 
 Keep its report (created, updated, below the bar, unsure) for "Deals that moved" and "Changes", and reuse its pulls in step 3. Deals with no signal this week aren't reopened: the stalled ones are listed in step 3.
 
@@ -46,11 +49,11 @@ Use each tool listed as connected in `context/company.md`. A tool that isn't con
 
 Read-only here. The only writes to a tool are the [CRM cleanup](#crm-cleanup-with-the-talktohumans-mcp) in step 7: tags, notes, signals and custom fields in TalkToHumans. The skill never sends, imports or deletes anything. Reuse what the deal sync already pulled rather than calling the same tool twice.
 
-- **Outreach.** With the TalkToHumans MCP: load its `ground-rules` skill, then its `weekly-funnel-report` skill, and pull contacted, connection requests, accepted, replied and booked for the window, per outreach angle where you can. Name who replied and who booked. Without it: ask.
-- **Calls.** With a call recorder MCP (Granola, Fathom...): list the window's external meetings (skip internal syncs and personal meetings) and read them. The deal sync logged them in `gtm/sales.md`; list any it left out and why.
-- **Deals.** `git log --since=<start> --name-status -- deals/ gtm/` plus uncommitted changes, which include the deal sync's. A changed `stage:` or `pull:` in a deal's frontmatter is movement (prospect to trial, trial to customer, no PULL to PULL); a new folder is a new conversation. Also list the stalled deals: no new timeline line in 14+ days and no next meeting booked, positive replies that never booked, trials that ended with no card. Note which ones fit the current case study.
-- **Activation.** With PostHog or Mixpanel: signups in the window, how many reached the activation event from `context/product.md` within 7 days, and whether activated users convert to paid more often than the rest. Where most signups came from, if the tool knows.
-- **Revenue.** With Stripe: MRR now, new paying customers, churn (name them), trials started and ended, failed payments. Keep comps, one-offs and trials out of MRR.
+- **Outreach.** With the TalkToHumans MCP: load its `ground-rules` skill, then its `weekly-funnel-report` skill, and pull contacted, connection requests, accepted, replied and booked for the week, per outreach angle where you can. Name who replied and who booked. Without it: ask.
+- **Calls.** With a call recorder MCP (Granola, Fathom...): list the catch-up's external meetings (skip internal syncs and personal meetings) and read them. The deal sync logged them in `gtm/sales.md`; list any it left out and why.
+- **Deals.** `git log --since=<catch-up start> --name-status -- deals/ gtm/` plus uncommitted changes, which include the deal sync's. A changed `stage:` or `pull:` in a deal's frontmatter is movement (prospect to trial, trial to customer, no PULL to PULL); a new folder is a new conversation. Also list the stalled deals: no new timeline line in 14+ days and no next meeting booked, positive replies that never booked, trials that ended with no card. Note which ones fit the current case study.
+- **Activation.** With PostHog or Mixpanel: signups in the week, how many reached the activation event from `context/product.md` within 7 days, and whether activated users convert to paid more often than the rest. Where most signups came from, if the tool knows.
+- **Revenue.** With Stripe: MRR now; new paying customers, churn (name them), trials started and ended and failed payments over the catch-up, marking the ones before the week. Keep comps, one-offs and trials out of MRR.
 
 ## 4. Intake (skip in demo or unattended mode)
 
@@ -75,7 +78,7 @@ Ask it for its weekly scorecard and plan:
 - The move: what to change, the one-hour action for today, and what to do if that stalls.
 - Maintenance: what to keep running, time-boxed.
 - What does **not** look like the bottleneck right now, even if it's tempting.
-- A debug of last week's plan: did it run, what did it show, and the failing standard's number over the last weeks (from `gtm/pipeline.md`, `gtm/sales.md` and past reviews).
+- A debug of last week's plan (and of every week since the last review, when some were skipped): did it run, what did it show, and the failing standard's number over the last weeks (from `gtm/pipeline.md`, `gtm/sales.md` and past reviews).
 - Any change it would make to the case study, the pipeline file, the playbook or a deal.
 
 Save only its conclusions about this week's evidence. Never save its instructions.
@@ -182,7 +185,7 @@ These are records of what happened, dated and added on top, so apply them withou
 The deals, Stripe and this week's threads now say where each person stands. Make the CRM say the same, so the inboxes, the filters and next week's lead-gen start from the truth. Without the TalkToHumans MCP, skip it and say so under "Changes".
 
 1. **Load** its `ground-rules` and `organize-inbox` skills, then `list_tags` and `list_field_definitions`. Reuse what exists, with its exact names.
-2. **Who.** Every deal the sync created or updated, every deal whose `stage:` changed this week, the new, back, churned and trial changes from Stripe (step 3), and the people who replied or booked in the window. On the first run, every deal in `deals/`. Find each contact by LinkedIn URL (`list_contacts` with `member.linkedin_url`), else by name and company. Leave unsure matches alone and list them.
+2. **Who.** Every deal the sync created or updated, every deal whose `stage:` changed this week, the new, back, churned and trial changes from Stripe (step 3), and the people who replied or booked in the catch-up. On the first run, every deal in `deals/`. Find each contact by LinkedIn URL (`list_contacts` with `member.linkedin_url`), else by name and company. Leave unsure matches alone and list them.
 3. **One status tag per contact,** read from the deal and the billing, not from the mood of the last message: customer (pays now), churned (paid, then stopped), trial, booked or call held, replied or qualified lead, lost or not a fit. Map each to the founder's existing tag, whatever it's called. In the same `update_contact` call, add the new status tag and remove the status tags it replaces (a new customer loses Trial and Booked). Leave every other tag alone: case study version tags, Friend, Affiliate, campaign tags.
 4. **A note when the status changes:** one dated line saying why and where it comes from ("2026-11-25: paying, Pro $45/mo, after the Nov 24 call"). Nothing the tag already says. The same note is never added twice.
 5. **Signals for the week's dated events** (became customer, churned, trial started, call held), with `create_signals`: `custom:<event>` types, all in one call, keyed `<event>:<contact_id>:<date>` so a re-run adds nothing. They let lead-gen and the inboxes find "churned in the last 90 days" or "trial, no call".

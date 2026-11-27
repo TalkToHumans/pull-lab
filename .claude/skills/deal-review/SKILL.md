@@ -77,7 +77,7 @@ An existing deal takes any new touch, even a small one: a small one is a Timelin
 
 ## Weekly sweep
 
-Run by the [weekly review](../weekly-review/SKILL.md) as its first step, or when the founder asks to "update the deals for this week". It covers what happened in a window (default: the last 7 days), never every deal.
+Run by the [weekly review](../weekly-review/SKILL.md) as its first step, or when the founder asks to "update the deals for this week". It covers what happened in a window, never every deal: the weekly review passes its catch-up (from the day after the last review to the week's last day), so nothing between two reviews is missed; asked on its own, the last 7 days.
 
 1. **Collect the window's signals** from each connected tool: conversations where the other side wrote (TalkToHumans), external calls (call recorder), new signups and their usage (PostHog or Mixpanel), and billing changes: trials started or ended, new payers, upgrades, downgrades, cancellations, failed payments (Stripe). Also compare the `stage:` of every deal that has a billing id with its subscription today: a drift is a signal.
 2. **Match** each signal to a deal by name, email, company, thread link and billing or analytics ids. One person or workspace, one deal; several signals for one person are one update.
